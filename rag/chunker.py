@@ -159,17 +159,16 @@ def build_article_chunks(parsed, chapter="", section=""):
 
 def split_supplementary(content):
     """
-    부칙 내용을 조문 단위로 분리한다.
-
-    조문 제목이 없는 부칙은 전체 내용을 하나의 청크로 유지한다.
-    첫 조문 앞의 부칙 제목도 첫 번째 청크에 포함한다.
+    부칙의 조문, 생략 안내, 조문 번호가 없는 내용을 구분한다.
+    원문의 순서와 텍스트를 보존한다.
     """
 
     pattern = (
-        r"(?m)^제(\d+)조"
-        r"(?:의(\d+))?"
-        r"(?:\(([^)\n]+)\))?"
-        r"(?=\s|$)"
+        r"(?m)^(?:"
+        r"제\d+조(?:의\d+)?(?:\([^)]+\))?"
+        r"|제\d+조부터\s*제\d+조까지\s*생략"
+        r")(?=\s|$)"
+        r"|제\d+조(?:의\d+)?\s+생략"
     )
 
     matches = list(re.finditer(pattern, content))
@@ -178,34 +177,53 @@ def split_supplementary(content):
         return [{
             "article": "부칙",
             "text": content.strip(),
+            "content_type": "general",
         }]
 
     chunks = []
-
     prefix = content[:matches[0].start()].strip()
 
     for index, match in enumerate(matches):
         start = match.start()
-
         end = (
             matches[index + 1].start()
             if index + 1 < len(matches)
             else len(content)
         )
 
-        article_text = content[start:end].strip()
+        chunk_text = content[start:end].strip()
+        matched_heading = match.group()
+
+        is_omission = bool(
+            re.match(
+                r"제\d+조부터\s*제\d+조까지\s*생략",
+                matched_heading,
+            )
+        ) or bool(
+            re.fullmatch(
+                r"제\d+조(?:의\d+)?\s*생략",
+                matched_heading,
+            )
+        )
+
+        if is_omission:
+            article_id = matched_heading
+            content_type = "omission"
+        else:
+            article_match = re.match(
+                r"제\d+조(?:의\d+)?",
+                matched_heading,
+            )
+            article_id = article_match.group()
+            content_type = "article"
 
         if index == 0 and prefix:
-            article_text = f"{prefix}\n\n{article_text}"
-
-        article_id = f"제{match.group(1)}조"
-
-        if match.group(2):
-            article_id += f"의{match.group(2)}"
+            chunk_text = f"{prefix}\n\n{chunk_text}"
 
         chunks.append({
             "article": article_id,
-            "text": article_text,
+            "text": chunk_text,
+            "content_type": content_type,
         })
 
     return chunks
@@ -277,6 +295,7 @@ def parse_supplementary(root):
                 "id": f"{parent_id}-c{index}",
                 "parent_id": parent_id,
                 "chunk_type": "child",
+                "content_type": chunk["content_type"],
                 **common_metadata,
                 "article": chunk["article"],
                 "paragraph": "",
