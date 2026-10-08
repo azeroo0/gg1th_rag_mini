@@ -1,0 +1,3726 @@
+{
+  "experiment_name": "dense_v2_golden_set",
+  "collection_name": "beopjeong_law_v2",
+  "embedding_model": "text-embedding-3-small",
+  "dataset_version": "legal_chunks_v2.json (Child 206)",
+  "golden_set_path": "/mnt/c/Users/Admin/gg1th_rag_mini/eval/golden_set_v2.jsonl",
+  "golden_set_field_usage": {
+    "question": "question",
+    "qid": "id",
+    "answerable": "answerable",
+    "category": "type",
+    "references": "answer_articles"
+  },
+  "total_questions": 45,
+  "top_k": 5,
+  "execution_timestamp": "20261008T155724",
+  "embedding_stats": {
+    "unique_questions": 45,
+    "duplicate_questions": 0,
+    "cache_hits": 1,
+    "cache_misses": 44,
+    "api_calls": 8,
+    "api_batches": 8,
+    "rate_limit_retries": 0,
+    "other_retries": 0,
+    "embedding_seconds": 16.15,
+    "final_batch_size": 7,
+    "total_seconds": 31.63
+  },
+  "retrieval_results": null,
+  "evaluation_metrics": {
+    "article_level": {
+      "question_count": 36,
+      "hit_at_1": 0.6944,
+      "hit_at_3": 0.8611,
+      "hit_at_5": 0.8611,
+      "recall_at_5": 0.8009,
+      "mrr": 0.7639
+    },
+    "provision_level": {
+      "question_count": 36,
+      "hit_at_1": 0.6944,
+      "hit_at_3": 0.7778,
+      "hit_at_5": 0.8611,
+      "recall_at_5": 0.8009,
+      "mrr": 0.7463
+    },
+    "precise_diagnosis": {
+      "question_count": 0,
+      "hit_at_1": null,
+      "hit_at_3": null,
+      "hit_at_5": null,
+      "recall_at_5": null,
+      "mrr": null
+    },
+    "gold_reference_depth_counts": {
+      "article": 44
+    },
+    "answerable_question_count": 36,
+    "unanswerable_question_count": 9,
+    "note": "article_level은 조문(제N조) 단위 적중률이며 세부 조항 적중률이 아니다. precise_diagnosis는 정답이 항ㆍ호ㆍ목까지 지정된 질문만 조문 경로 완전 일치로 평가한 결과다."
+  },
+  "per_question": {
+    "article_level": [
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.655607,
+            "id": "21311-20260721-제2조-p1-i4-definition",
+            "article_path": "제2조제4호(정의)",
+            "chunk_role": "definition_only",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.598418,
+            "id": "21311-20260721-제34조-p1-i2",
+            "article_path": "제34조제1항제2호",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q01"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.591502,
+            "id": "21311-20260721-제2조-p1-i4-definition",
+            "article_path": "제2조제4호(정의)",
+            "chunk_role": "definition_only",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 3,
+            "score": 0.580459,
+            "id": "21311-20260721-제31조-p2",
+            "article_path": "제31조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q02"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.671366,
+            "id": "21311-20260721-제2조-p1-i7",
+            "article_path": "제2조제7호",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.615831,
+            "id": "21311-20260721-제31조-p2",
+            "article_path": "제31조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.594063,
+            "id": "21311-20260721-제34조-p1-i1",
+            "article_path": "제34조제1항제1호",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q03"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.636988,
+            "id": "21311-20260721-제2조-p1-i6",
+            "article_path": "제2조제6호",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 5,
+            "score": 0.575508,
+            "id": "21311-20260721-제31조-p2",
+            "article_path": "제31조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q04"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.53842,
+            "id": "21311-20260721-제3조-p5",
+            "article_path": "제3조제5항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.535994,
+            "id": "21311-20260721-제2조-p1-i4-definition",
+            "article_path": "제2조제4호(정의)",
+            "chunk_role": "definition_only",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.516611,
+            "id": "21311-20260721-supplementary-21065-20251001-c2",
+            "article_path": "제2조부터 제6조까지 생략",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.496177,
+            "id": "21311-20260721-supplementary-21065-20251001-c4",
+            "article_path": "제8조",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.492798,
+            "id": "21311-20260721-제6조-p2",
+            "article_path": "제6조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q05"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.544218,
+            "id": "21311-20260721-제31조-p3",
+            "article_path": "제31조제3항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.533448,
+            "id": "21311-20260721-제2조-p1-i5",
+            "article_path": "제2조제5호",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q06"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": null,
+        "hits": {
+          "1": false,
+          "3": false,
+          "5": false
+        },
+        "recall_at_5": 0.0,
+        "reciprocal_rank": 0.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.63949,
+            "id": "21311-20260721-제34조-p1-i3",
+            "article_path": "제34조제1항제3호",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q07"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.712633,
+            "id": "21311-20260721-제34조-p1-i5",
+            "article_path": "제34조제1항제5호",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "q08"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 2,
+        "hits": {
+          "1": false,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 0.5,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.555663,
+            "id": "21311-20260721-제2조-p1-i1",
+            "article_path": "제2조제1호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 3,
+            "score": 0.551078,
+            "id": "21311-20260721-제32조-p1",
+            "article_path": "제32조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 3,
+            "original_rank": 5,
+            "score": 0.495468,
+            "id": "21311-20260721-제31조-p3",
+            "article_path": "제31조제3항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q09"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": null,
+        "hits": {
+          "1": false,
+          "3": false,
+          "5": false
+        },
+        "recall_at_5": 0.0,
+        "reciprocal_rank": 0.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.661312,
+            "id": "21311-20260721-제34조-p1-i4",
+            "article_path": "제34조제1항제4호",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q10"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.474087,
+            "id": "21311-20260721-제31조-p3",
+            "article_path": "제31조제3항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.374476,
+            "id": "21311-20260721-제2조-p1-i5",
+            "article_path": "제2조제5호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.370531,
+            "id": "21311-20260721-supplementary-21065-20251001-c4",
+            "article_path": "제8조",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.365853,
+            "id": "21311-20260721-supplementary-21065-20251001-c2",
+            "article_path": "제2조부터 제6조까지 생략",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q11"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 3,
+        "hits": {
+          "1": false,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 0.3333333333333333,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.556142,
+            "id": "21311-20260721-제2조-p1-i4-definition",
+            "article_path": "제2조제4호(정의)",
+            "chunk_role": "definition_only",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 4,
+            "score": 0.533256,
+            "id": "21311-20260721-supplementary-21065-20251001-c2",
+            "article_path": "제2조부터 제6조까지 생략",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 5,
+            "score": 0.531439,
+            "id": "21311-20260721-제3조-p2",
+            "article_path": "제3조제2항",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "q12"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.382871,
+            "id": "21311-20260721-제31조-p3",
+            "article_path": "제31조제3항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 4,
+            "score": 0.315253,
+            "id": "21311-20260721-제2조-p1-i5",
+            "article_path": "제2조제5호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 5,
+            "score": 0.311453,
+            "id": "21311-20260721-제3조-p5",
+            "article_path": "제3조제5항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q13"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 2,
+        "hits": {
+          "1": false,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 0.5,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.471847,
+            "id": "21311-20260721-제2조-p1-i8",
+            "article_path": "제2조제8호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.429554,
+            "id": "21311-20260721-제31조-p1",
+            "article_path": "제31조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 3,
+            "original_rank": 5,
+            "score": 0.399074,
+            "id": "21311-20260721-제32조-p2",
+            "article_path": "제32조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q14"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": null,
+        "hits": {
+          "1": false,
+          "3": false,
+          "5": false
+        },
+        "recall_at_5": 0.0,
+        "reciprocal_rank": 0.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.407099,
+            "id": "21311-20260721-제35조-p1",
+            "article_path": "제35조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.400195,
+            "id": "21311-20260721-제30조-p1",
+            "article_path": "제30조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.400071,
+            "id": "21311-20260721-제13조-p2",
+            "article_path": "제13조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.398686,
+            "id": "21311-20260721-제14조-p1",
+            "article_path": "제14조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.398238,
+            "id": "21311-20260721-제32조-p1",
+            "article_path": "제32조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q15"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 2,
+        "first_hit_rank": 3,
+        "hits": {
+          "1": false,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 0.3333333333333333,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.443915,
+            "id": "21311-20260721-supplementary-20676-20250121-c3",
+            "article_path": "제3조",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.407106,
+            "id": "21311-20260721-제40조-p1",
+            "article_path": "제40조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 4,
+            "score": 0.376763,
+            "id": "21311-20260721-supplementary-20676-20250121-c2",
+            "article_path": "제2조",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 4,
+            "original_rank": 5,
+            "score": 0.375095,
+            "id": "21311-20260721-제34조-p3",
+            "article_path": "제34조제3항",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "q16"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": null,
+        "hits": {
+          "1": false,
+          "3": false,
+          "5": false
+        },
+        "recall_at_5": 0.0,
+        "reciprocal_rank": 0.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.549975,
+            "id": "21311-20260721-제26조-p7",
+            "article_path": "제26조제7항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.519099,
+            "id": "21311-20260721-제22조의2-p9",
+            "article_path": "제22조의2제9항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.50051,
+            "id": "21311-20260721-제16조-p1",
+            "article_path": "제16조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.499646,
+            "id": "21311-20260721-제5조-p1",
+            "article_path": "제5조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q17"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 2,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.507978,
+            "id": "21311-20260721-제43조-p1",
+            "article_path": "제43조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.473976,
+            "id": "21311-20260721-제36조-p1",
+            "article_path": "제36조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "q18"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 2,
+        "first_hit_rank": null,
+        "hits": {
+          "1": false,
+          "3": false,
+          "5": false
+        },
+        "recall_at_5": 0.0,
+        "reciprocal_rank": 0.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.610892,
+            "id": "21311-20260721-제33조-p1",
+            "article_path": "제33조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.610533,
+            "id": "21311-20260721-제34조-p1-i2",
+            "article_path": "제34조제1항제2호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 5,
+            "score": 0.590156,
+            "id": "21311-20260721-제35조-p1",
+            "article_path": "제35조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q19"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 3,
+        "hits": {
+          "1": false,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 0.3333333333333333,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.57484,
+            "id": "21311-20260721-제7조-p9",
+            "article_path": "제7조제9항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.537023,
+            "id": "21311-20260721-제9조-p1",
+            "article_path": "제9조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 4,
+            "score": 0.483163,
+            "id": "21311-20260721-제42조-full",
+            "article_path": "제42조",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 4,
+            "original_rank": 5,
+            "score": 0.438812,
+            "id": "21311-20260721-제10조-p1",
+            "article_path": "제10조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q20"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 2,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 0.5,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.307358,
+            "id": "21311-20260721-제43조-p1",
+            "article_path": "제43조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 3,
+            "score": 0.273531,
+            "id": "21311-20260721-제2조-p1-i4-다",
+            "article_path": "제2조제4호다목",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q21"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.466867,
+            "id": "21311-20260721-제43조-p2",
+            "article_path": "제43조제2항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 3,
+            "score": 0.284328,
+            "id": "21311-20260721-제2조-p1-i4-라",
+            "article_path": "제2조제4호라목",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q22"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 3,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 0.3333333333333333,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.621712,
+            "id": "21311-20260721-제34조-p1-i6",
+            "article_path": "제34조제1항제6호",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "q23"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.54349,
+            "id": "21311-20260721-제36조-p1",
+            "article_path": "제36조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 4,
+            "score": 0.411975,
+            "id": "21311-20260721-제21조-p2",
+            "article_path": "제21조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 5,
+            "score": 0.393894,
+            "id": "21311-20260721-제12조-p4",
+            "article_path": "제12조제4항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q24"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 2,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 0.5,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.574514,
+            "id": "21311-20260721-제12조-p2",
+            "article_path": "제12조제2항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 5,
+            "score": 0.466239,
+            "id": "21311-20260721-제13조-p1",
+            "article_path": "제13조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q25"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 2,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 0.5,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.661578,
+            "id": "21311-20260721-제7조-p1",
+            "article_path": "제7조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "q26"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.643367,
+            "id": "21311-20260721-제6조-p5",
+            "article_path": "제6조제5항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 4,
+            "score": 0.561385,
+            "id": "21311-20260721-supplementary-21065-20251001-c2",
+            "article_path": "제2조부터 제6조까지 생략",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q27"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.41174,
+            "id": "21311-20260721-제17조의2-p1",
+            "article_path": "제17조의2제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.39439,
+            "id": "21311-20260721-제22조-p2",
+            "article_path": "제22조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.381126,
+            "id": "21311-20260721-제16조-p3",
+            "article_path": "제16조제3항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q28"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.680713,
+            "id": "21311-20260721-제22조의2-p2",
+            "article_path": "제22조의2제2항",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "q29"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 2,
+        "hits": {
+          "1": false,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 0.5,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.590461,
+            "id": "21311-20260721-제22조의2-p6",
+            "article_path": "제22조의2제6항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 3,
+            "score": 0.57819,
+            "id": "21311-20260721-제22조의3-full",
+            "article_path": "제22조의3",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "q30"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.621024,
+            "id": "21311-20260721-제18조-p4",
+            "article_path": "제18조제4항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.485494,
+            "id": "21311-20260721-제22조의2-p7",
+            "article_path": "제22조의2제7항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 4,
+            "score": 0.457319,
+            "id": "21311-20260721-제26조-p4",
+            "article_path": "제26조제4항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q31"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.561902,
+            "id": "21311-20260721-제27조-p3",
+            "article_path": "제27조제3항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 4,
+            "score": 0.496944,
+            "id": "21311-20260721-제28조-p2",
+            "article_path": "제28조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 5,
+            "score": 0.474092,
+            "id": "21311-20260721-제2조-p1-i11",
+            "article_path": "제2조제11호",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q32"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.536073,
+            "id": "21311-20260721-제27조-p2",
+            "article_path": "제27조제2항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 3,
+            "score": 0.525691,
+            "id": "21311-20260721-제28조-p2",
+            "article_path": "제28조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 5,
+            "score": 0.487221,
+            "id": "21311-20260721-제3조-p5",
+            "article_path": "제3조제5항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q33"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.563951,
+            "id": "21311-20260721-제28조-p1",
+            "article_path": "제28조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 5,
+            "score": 0.436252,
+            "id": "21311-20260721-제10조-p4",
+            "article_path": "제10조제4항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q34"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.656914,
+            "id": "21311-20260721-제30조-p1",
+            "article_path": "제30조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 4,
+            "score": 0.538502,
+            "id": "21311-20260721-제12조-p3",
+            "article_path": "제12조제3항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q35"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.639672,
+            "id": "21311-20260721-제25조-p2",
+            "article_path": "제25조제2항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 3,
+            "score": 0.58845,
+            "id": "21311-20260721-제15조-p2",
+            "article_path": "제15조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 4,
+            "score": 0.562827,
+            "id": "21311-20260721-제22조의2-p6",
+            "article_path": "제22조의2제6항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q36"
+      }
+    ],
+    "provision_level": [
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.655607,
+            "id": "21311-20260721-제2조-p1-i4-definition",
+            "article_path": "제2조제4호(정의)",
+            "chunk_role": "definition_only",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.598418,
+            "id": "21311-20260721-제34조-p1-i2",
+            "article_path": "제34조제1항제2호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.589325,
+            "id": "21311-20260721-제2조-p1-i4-바",
+            "article_path": "제2조제4호바목",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.577801,
+            "id": "21311-20260721-제34조-p1-i1",
+            "article_path": "제34조제1항제1호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.576772,
+            "id": "21311-20260721-제34조-p1-i4",
+            "article_path": "제34조제1항제4호",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q01"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.591502,
+            "id": "21311-20260721-제2조-p1-i4-definition",
+            "article_path": "제2조제4호(정의)",
+            "chunk_role": "definition_only",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.581668,
+            "id": "21311-20260721-제2조-p1-i5",
+            "article_path": "제2조제5호",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.580459,
+            "id": "21311-20260721-제31조-p2",
+            "article_path": "제31조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.576671,
+            "id": "21311-20260721-제2조-p1-i6",
+            "article_path": "제2조제6호",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.559735,
+            "id": "21311-20260721-제2조-p1-i3",
+            "article_path": "제2조제3호",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "q02"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.671366,
+            "id": "21311-20260721-제2조-p1-i7",
+            "article_path": "제2조제7호",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.615831,
+            "id": "21311-20260721-제31조-p2",
+            "article_path": "제31조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.594063,
+            "id": "21311-20260721-제34조-p1-i1",
+            "article_path": "제34조제1항제1호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.587555,
+            "id": "21311-20260721-제31조-p3",
+            "article_path": "제31조제3항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.582565,
+            "id": "21311-20260721-제34조-p1-i2",
+            "article_path": "제34조제1항제2호",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q03"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.636988,
+            "id": "21311-20260721-제2조-p1-i6",
+            "article_path": "제2조제6호",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.582816,
+            "id": "21311-20260721-제2조-p1-i7",
+            "article_path": "제2조제7호",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.577916,
+            "id": "21311-20260721-제2조-p1-i4-definition",
+            "article_path": "제2조제4호(정의)",
+            "chunk_role": "definition_only",
+            "is_hit": true
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.577256,
+            "id": "21311-20260721-제2조-p1-i2",
+            "article_path": "제2조제2호",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.575508,
+            "id": "21311-20260721-제31조-p2",
+            "article_path": "제31조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q04"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.53842,
+            "id": "21311-20260721-제3조-p5",
+            "article_path": "제3조제5항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.535994,
+            "id": "21311-20260721-제2조-p1-i4-definition",
+            "article_path": "제2조제4호(정의)",
+            "chunk_role": "definition_only",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.516611,
+            "id": "21311-20260721-supplementary-21065-20251001-c2",
+            "article_path": "제2조부터 제6조까지 생략",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.496177,
+            "id": "21311-20260721-supplementary-21065-20251001-c4",
+            "article_path": "제8조",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.492798,
+            "id": "21311-20260721-제6조-p2",
+            "article_path": "제6조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q05"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.544218,
+            "id": "21311-20260721-제31조-p3",
+            "article_path": "제31조제3항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.533448,
+            "id": "21311-20260721-제2조-p1-i5",
+            "article_path": "제2조제5호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.53023,
+            "id": "21311-20260721-제31조-p2",
+            "article_path": "제31조제2항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.500769,
+            "id": "21311-20260721-제2조-p1-i2",
+            "article_path": "제2조제2호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.47995,
+            "id": "21311-20260721-제2조-p1-i4-바",
+            "article_path": "제2조제4호바목",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q06"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": null,
+        "hits": {
+          "1": false,
+          "3": false,
+          "5": false
+        },
+        "recall_at_5": 0.0,
+        "reciprocal_rank": 0.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.63949,
+            "id": "21311-20260721-제34조-p1-i3",
+            "article_path": "제34조제1항제3호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.627749,
+            "id": "21311-20260721-제34조-p1-i2",
+            "article_path": "제34조제1항제2호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.624854,
+            "id": "21311-20260721-제34조-p1",
+            "article_path": "제34조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.618005,
+            "id": "21311-20260721-제34조-p1-i4",
+            "article_path": "제34조제1항제4호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.608451,
+            "id": "21311-20260721-제34조-p1-i1",
+            "article_path": "제34조제1항제1호",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q07"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.712633,
+            "id": "21311-20260721-제34조-p1-i5",
+            "article_path": "제34조제1항제5호",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.706679,
+            "id": "21311-20260721-제34조-p1-i4",
+            "article_path": "제34조제1항제4호",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.701992,
+            "id": "21311-20260721-제34조-p1-i1",
+            "article_path": "제34조제1항제1호",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.701292,
+            "id": "21311-20260721-제34조-p1",
+            "article_path": "제34조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.698078,
+            "id": "21311-20260721-제34조-p1-i6",
+            "article_path": "제34조제1항제6호",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "q08"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 3,
+        "hits": {
+          "1": false,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 0.3333333333333333,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.555663,
+            "id": "21311-20260721-제2조-p1-i1",
+            "article_path": "제2조제1호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.555325,
+            "id": "21311-20260721-제2조-p1-i12",
+            "article_path": "제2조제12호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.551078,
+            "id": "21311-20260721-제32조-p1",
+            "article_path": "제32조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.502843,
+            "id": "21311-20260721-제2조-p1-i2",
+            "article_path": "제2조제2호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.495468,
+            "id": "21311-20260721-제31조-p3",
+            "article_path": "제31조제3항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q09"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": null,
+        "hits": {
+          "1": false,
+          "3": false,
+          "5": false
+        },
+        "recall_at_5": 0.0,
+        "reciprocal_rank": 0.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.661312,
+            "id": "21311-20260721-제34조-p1-i4",
+            "article_path": "제34조제1항제4호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.658307,
+            "id": "21311-20260721-제34조-p1-i5",
+            "article_path": "제34조제1항제5호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.656576,
+            "id": "21311-20260721-제34조-p1-i1",
+            "article_path": "제34조제1항제1호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.655068,
+            "id": "21311-20260721-제34조-p1-i6",
+            "article_path": "제34조제1항제6호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.651106,
+            "id": "21311-20260721-제34조-p1-i2",
+            "article_path": "제34조제1항제2호",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q10"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.474087,
+            "id": "21311-20260721-제31조-p3",
+            "article_path": "제31조제3항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.374476,
+            "id": "21311-20260721-제2조-p1-i5",
+            "article_path": "제2조제5호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.370531,
+            "id": "21311-20260721-supplementary-21065-20251001-c4",
+            "article_path": "제8조",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.365853,
+            "id": "21311-20260721-supplementary-21065-20251001-c2",
+            "article_path": "제2조부터 제6조까지 생략",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.365131,
+            "id": "21311-20260721-제31조-p2",
+            "article_path": "제31조제2항",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "q11"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 5,
+        "hits": {
+          "1": false,
+          "3": false,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 0.2,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.556142,
+            "id": "21311-20260721-제2조-p1-i4-definition",
+            "article_path": "제2조제4호(정의)",
+            "chunk_role": "definition_only",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.552279,
+            "id": "21311-20260721-제2조-p1-i4-바",
+            "article_path": "제2조제4호바목",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.533602,
+            "id": "21311-20260721-제2조-p1-i4-사",
+            "article_path": "제2조제4호사목",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.533256,
+            "id": "21311-20260721-supplementary-21065-20251001-c2",
+            "article_path": "제2조부터 제6조까지 생략",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.531439,
+            "id": "21311-20260721-제3조-p2",
+            "article_path": "제3조제2항",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "q12"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.382871,
+            "id": "21311-20260721-제31조-p3",
+            "article_path": "제31조제3항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.324195,
+            "id": "21311-20260721-제31조-p1",
+            "article_path": "제31조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.320094,
+            "id": "21311-20260721-제31조-p2",
+            "article_path": "제31조제2항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.315253,
+            "id": "21311-20260721-제2조-p1-i5",
+            "article_path": "제2조제5호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.311453,
+            "id": "21311-20260721-제3조-p5",
+            "article_path": "제3조제5항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q13"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 2,
+        "hits": {
+          "1": false,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 0.5,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.471847,
+            "id": "21311-20260721-제2조-p1-i8",
+            "article_path": "제2조제8호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.429554,
+            "id": "21311-20260721-제31조-p1",
+            "article_path": "제31조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.411219,
+            "id": "21311-20260721-제31조-p2",
+            "article_path": "제31조제2항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.404235,
+            "id": "21311-20260721-제2조-p1-i6",
+            "article_path": "제2조제6호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.399074,
+            "id": "21311-20260721-제32조-p2",
+            "article_path": "제32조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q14"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": null,
+        "hits": {
+          "1": false,
+          "3": false,
+          "5": false
+        },
+        "recall_at_5": 0.0,
+        "reciprocal_rank": 0.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.407099,
+            "id": "21311-20260721-제35조-p1",
+            "article_path": "제35조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.400195,
+            "id": "21311-20260721-제30조-p1",
+            "article_path": "제30조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.400071,
+            "id": "21311-20260721-제13조-p2",
+            "article_path": "제13조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.398686,
+            "id": "21311-20260721-제14조-p1",
+            "article_path": "제14조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.398238,
+            "id": "21311-20260721-제32조-p1",
+            "article_path": "제32조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q15"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 2,
+        "first_hit_rank": 4,
+        "hits": {
+          "1": false,
+          "3": false,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 0.25,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.443915,
+            "id": "21311-20260721-supplementary-20676-20250121-c3",
+            "article_path": "제3조",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.407106,
+            "id": "21311-20260721-제40조-p1",
+            "article_path": "제40조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.38989,
+            "id": "21311-20260721-제40조-p2",
+            "article_path": "제40조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.376763,
+            "id": "21311-20260721-supplementary-20676-20250121-c2",
+            "article_path": "제2조",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.375095,
+            "id": "21311-20260721-제34조-p3",
+            "article_path": "제34조제3항",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "q16"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": null,
+        "hits": {
+          "1": false,
+          "3": false,
+          "5": false
+        },
+        "recall_at_5": 0.0,
+        "reciprocal_rank": 0.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.549975,
+            "id": "21311-20260721-제26조-p7",
+            "article_path": "제26조제7항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.519099,
+            "id": "21311-20260721-제22조의2-p9",
+            "article_path": "제22조의2제9항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.50051,
+            "id": "21311-20260721-제16조-p1",
+            "article_path": "제16조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.499646,
+            "id": "21311-20260721-제5조-p1",
+            "article_path": "제5조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.498707,
+            "id": "21311-20260721-제5조-p2",
+            "article_path": "제5조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q17"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 2,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.507978,
+            "id": "21311-20260721-제43조-p1",
+            "article_path": "제43조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.473976,
+            "id": "21311-20260721-제36조-p1",
+            "article_path": "제36조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.44979,
+            "id": "21311-20260721-제43조-p2",
+            "article_path": "제43조제2항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.428989,
+            "id": "21311-20260721-제36조-p2",
+            "article_path": "제36조제2항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.422727,
+            "id": "21311-20260721-제36조-p3",
+            "article_path": "제36조제3항",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "q18"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 2,
+        "first_hit_rank": null,
+        "hits": {
+          "1": false,
+          "3": false,
+          "5": false
+        },
+        "recall_at_5": 0.0,
+        "reciprocal_rank": 0.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.610892,
+            "id": "21311-20260721-제33조-p1",
+            "article_path": "제33조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.610533,
+            "id": "21311-20260721-제34조-p1-i2",
+            "article_path": "제34조제1항제2호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.599666,
+            "id": "21311-20260721-제34조-p1",
+            "article_path": "제34조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.595546,
+            "id": "21311-20260721-제34조-p1-i5",
+            "article_path": "제34조제1항제5호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.590156,
+            "id": "21311-20260721-제35조-p1",
+            "article_path": "제35조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q19"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 4,
+        "hits": {
+          "1": false,
+          "3": false,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 0.25,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.57484,
+            "id": "21311-20260721-제7조-p9",
+            "article_path": "제7조제9항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.537023,
+            "id": "21311-20260721-제9조-p1",
+            "article_path": "제9조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.498075,
+            "id": "21311-20260721-제9조-p2",
+            "article_path": "제9조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.483163,
+            "id": "21311-20260721-제42조-full",
+            "article_path": "제42조",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.438812,
+            "id": "21311-20260721-제10조-p1",
+            "article_path": "제10조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q20"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 2,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 0.5,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.307358,
+            "id": "21311-20260721-제43조-p1",
+            "article_path": "제43조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.291936,
+            "id": "21311-20260721-제43조-p2",
+            "article_path": "제43조제2항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.273531,
+            "id": "21311-20260721-제2조-p1-i4-다",
+            "article_path": "제2조제4호다목",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.270057,
+            "id": "21311-20260721-제2조-p1-i4-바",
+            "article_path": "제2조제4호바목",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.262938,
+            "id": "21311-20260721-제2조-p1-i4-라",
+            "article_path": "제2조제4호라목",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q21"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.466867,
+            "id": "21311-20260721-제43조-p2",
+            "article_path": "제43조제2항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.457215,
+            "id": "21311-20260721-제43조-p1",
+            "article_path": "제43조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.284328,
+            "id": "21311-20260721-제2조-p1-i4-라",
+            "article_path": "제2조제4호라목",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.263774,
+            "id": "21311-20260721-제2조-p1-i4-다",
+            "article_path": "제2조제4호다목",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.255061,
+            "id": "21311-20260721-제2조-p1-i4-나",
+            "article_path": "제2조제4호나목",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q22"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 3,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 0.3333333333333333,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.621712,
+            "id": "21311-20260721-제34조-p1-i6",
+            "article_path": "제34조제1항제6호",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.619788,
+            "id": "21311-20260721-제34조-p1-i4",
+            "article_path": "제34조제1항제4호",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.615087,
+            "id": "21311-20260721-제34조-p1-i1",
+            "article_path": "제34조제1항제1호",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.615058,
+            "id": "21311-20260721-제34조-p1-i2",
+            "article_path": "제34조제1항제2호",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.612268,
+            "id": "21311-20260721-제34조-p1",
+            "article_path": "제34조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "q23"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.54349,
+            "id": "21311-20260721-제36조-p1",
+            "article_path": "제36조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.496411,
+            "id": "21311-20260721-제36조-p2",
+            "article_path": "제36조제2항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.462554,
+            "id": "21311-20260721-제36조-p3",
+            "article_path": "제36조제3항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.411975,
+            "id": "21311-20260721-제21조-p2",
+            "article_path": "제21조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.393894,
+            "id": "21311-20260721-제12조-p4",
+            "article_path": "제12조제4항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q24"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 2,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 0.5,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.574514,
+            "id": "21311-20260721-제12조-p2",
+            "article_path": "제12조제2항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.50656,
+            "id": "21311-20260721-제12조-p1",
+            "article_path": "제12조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.500003,
+            "id": "21311-20260721-제12조-p4",
+            "article_path": "제12조제4항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.485674,
+            "id": "21311-20260721-제12조-p3",
+            "article_path": "제12조제3항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.466239,
+            "id": "21311-20260721-제13조-p1",
+            "article_path": "제13조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q25"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 2,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 0.5,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.661578,
+            "id": "21311-20260721-제7조-p1",
+            "article_path": "제7조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.620219,
+            "id": "21311-20260721-제7조-p11",
+            "article_path": "제7조제11항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.55477,
+            "id": "21311-20260721-제7조-p12",
+            "article_path": "제7조제12항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.546326,
+            "id": "21311-20260721-제7조-p9",
+            "article_path": "제7조제9항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.54139,
+            "id": "21311-20260721-제7조-p5",
+            "article_path": "제7조제5항",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "q26"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.643367,
+            "id": "21311-20260721-제6조-p5",
+            "article_path": "제6조제5항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.58316,
+            "id": "21311-20260721-제6조-p1",
+            "article_path": "제6조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.564122,
+            "id": "21311-20260721-제6조-p2",
+            "article_path": "제6조제2항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.561385,
+            "id": "21311-20260721-supplementary-21065-20251001-c2",
+            "article_path": "제2조부터 제6조까지 생략",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.555705,
+            "id": "21311-20260721-제6조-p3",
+            "article_path": "제6조제3항",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "q27"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.41174,
+            "id": "21311-20260721-제17조의2-p1",
+            "article_path": "제17조의2제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.39439,
+            "id": "21311-20260721-제22조-p2",
+            "article_path": "제22조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.381126,
+            "id": "21311-20260721-제16조-p3",
+            "article_path": "제16조제3항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.370271,
+            "id": "21311-20260721-제16조-p2",
+            "article_path": "제16조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.363142,
+            "id": "21311-20260721-제17조의2-p2",
+            "article_path": "제17조의2제2항",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "q28"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.680713,
+            "id": "21311-20260721-제22조의2-p2",
+            "article_path": "제22조의2제2항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.64505,
+            "id": "21311-20260721-제22조의2-p1",
+            "article_path": "제22조의2제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.641876,
+            "id": "21311-20260721-제22조의2-p4",
+            "article_path": "제22조의2제4항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.632604,
+            "id": "21311-20260721-제22조의2-p8",
+            "article_path": "제22조의2제8항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.632233,
+            "id": "21311-20260721-제22조의2-p12",
+            "article_path": "제22조의2제12항",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "q29"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 3,
+        "hits": {
+          "1": false,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 0.3333333333333333,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.590461,
+            "id": "21311-20260721-제22조의2-p6",
+            "article_path": "제22조의2제6항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.57843,
+            "id": "21311-20260721-제22조의2-p7",
+            "article_path": "제22조의2제7항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.57819,
+            "id": "21311-20260721-제22조의3-full",
+            "article_path": "제22조의3",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.569843,
+            "id": "21311-20260721-제22조의2-p1",
+            "article_path": "제22조의2제1항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.524903,
+            "id": "21311-20260721-제22조의2-p12",
+            "article_path": "제22조의2제12항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q30"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.621024,
+            "id": "21311-20260721-제18조-p4",
+            "article_path": "제18조제4항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.485494,
+            "id": "21311-20260721-제22조의2-p7",
+            "article_path": "제22조의2제7항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.473299,
+            "id": "21311-20260721-제18조-p2",
+            "article_path": "제18조제2항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.457319,
+            "id": "21311-20260721-제26조-p4",
+            "article_path": "제26조제4항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.449006,
+            "id": "21311-20260721-제18조-p1",
+            "article_path": "제18조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "q31"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.561902,
+            "id": "21311-20260721-제27조-p3",
+            "article_path": "제27조제3항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.539299,
+            "id": "21311-20260721-제27조-p2",
+            "article_path": "제27조제2항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.512617,
+            "id": "21311-20260721-제27조-p1",
+            "article_path": "제27조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.496944,
+            "id": "21311-20260721-제28조-p2",
+            "article_path": "제28조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.474092,
+            "id": "21311-20260721-제2조-p1-i11",
+            "article_path": "제2조제11호",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q32"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.536073,
+            "id": "21311-20260721-제27조-p2",
+            "article_path": "제27조제2항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.528483,
+            "id": "21311-20260721-제27조-p3",
+            "article_path": "제27조제3항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.525691,
+            "id": "21311-20260721-제28조-p2",
+            "article_path": "제28조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.516224,
+            "id": "21311-20260721-제27조-p1",
+            "article_path": "제27조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.487221,
+            "id": "21311-20260721-제3조-p5",
+            "article_path": "제3조제5항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q33"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.563951,
+            "id": "21311-20260721-제28조-p1",
+            "article_path": "제28조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.536843,
+            "id": "21311-20260721-제28조-p4",
+            "article_path": "제28조제4항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.524187,
+            "id": "21311-20260721-제28조-p2",
+            "article_path": "제28조제2항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.520404,
+            "id": "21311-20260721-제28조-p3",
+            "article_path": "제28조제3항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.436252,
+            "id": "21311-20260721-제10조-p4",
+            "article_path": "제10조제4항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q34"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.656914,
+            "id": "21311-20260721-제30조-p1",
+            "article_path": "제30조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.560908,
+            "id": "21311-20260721-제30조-p2",
+            "article_path": "제30조제2항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.546329,
+            "id": "21311-20260721-제30조-p3",
+            "article_path": "제30조제3항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.538502,
+            "id": "21311-20260721-제12조-p3",
+            "article_path": "제12조제3항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.536454,
+            "id": "21311-20260721-제12조-p2",
+            "article_path": "제12조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q35"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.639672,
+            "id": "21311-20260721-제25조-p2",
+            "article_path": "제25조제2항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.6382,
+            "id": "21311-20260721-제25조-p1",
+            "article_path": "제25조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.58845,
+            "id": "21311-20260721-제15조-p2",
+            "article_path": "제15조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.562827,
+            "id": "21311-20260721-제22조의2-p6",
+            "article_path": "제22조의2제6항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.553912,
+            "id": "21311-20260721-제15조-p3",
+            "article_path": "제15조제3항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "q36"
+      }
+    ],
+    "precise_diagnosis": []
+  },
+  "unanswerable_questions": [
+    {
+      "qid": "q37",
+      "question": "고영향 인공지능 영향평가의 구체적인 방법과 평가 항목은 무엇인가요?",
+      "top1_score": 0.711228,
+      "top1_article_path": "제35조제1항"
+    },
+    {
+      "qid": "q38",
+      "question": "고영향 인공지능 해당 영역의 구체적인 세부 기준 수치는 얼마인가요?",
+      "top1_score": 0.622056,
+      "top1_article_path": "제33조제3항"
+    },
+    {
+      "qid": "q39",
+      "question": "AI 법 위반 시 과징금은 얼마인가요?",
+      "top1_score": 0.42871,
+      "top1_article_path": "제3조"
+    },
+    {
+      "qid": "q40",
+      "question": "자율주행차 사고가 나면 AI 기본법에 따라 보상을 받나요?",
+      "top1_score": 0.389736,
+      "top1_article_path": "제32조제1항"
+    },
+    {
+      "qid": "q41",
+      "question": "AI 오작동으로 손해를 입었을 때 손해배상을 받을 수 있나요?",
+      "top1_score": 0.433721,
+      "top1_article_path": "제16조제4항"
+    },
+    {
+      "qid": "q42",
+      "question": "AI 관련 발명을 특허로 출원하려면 어떻게 해야 하나요?",
+      "top1_score": 0.408178,
+      "top1_article_path": "제2조부터 제6조까지 생략"
+    },
+    {
+      "qid": "q43",
+      "question": "고영향 인공지능 사업자에게 세금 감면 혜택이 있나요?",
+      "top1_score": 0.594581,
+      "top1_article_path": "제34조제1항제1호"
+    },
+    {
+      "qid": "q44",
+      "question": "AI 기본계획의 예산 규모는 얼마인가요?",
+      "top1_score": 0.480554,
+      "top1_article_path": "제6조제5항"
+    },
+    {
+      "qid": "q45",
+      "question": "인공지능 개발자 자격증 시험에 응시하려면 어떤 요건이 필요한가요?",
+      "top1_score": 0.629164,
+      "top1_article_path": "제30조제3항"
+    }
+  ]
+}

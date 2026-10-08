@@ -10,6 +10,7 @@ OUTPUT_PATH = BASE_DIR / "data" / "ai_basic_law" / "legal_chunks.json"
 
 LAW_NUMBER = "21311"
 LAW_NAME = "인공지능 발전과 신뢰 기반 조성 등에 관한 기본법"
+LAW_SHORT_NAME = "인공지능기본법"
 LAW_EFFECTIVE_DATE = "20260721"
 
 # 항이 길고 호마다 서로 다른 의무/조건을 규정하여, 항 전체 Child만으로는
@@ -30,6 +31,18 @@ SUBITEM_SPLIT_RULES = {
     ("제2조", "4"): (
         "고영향 인공지능의 정의가 가목부터 카목까지 11개의 서로 독립적인 "
         "적용 영역을 열거하므로 목 단위 세부 Child를 추가한다."
+    ),
+}
+
+# 호 전체 Child가 긴 열거 목록까지 포함하여 정의 문장의 의미가 희석되는 경우에
+# 한해, 정의 문장만 담는 '정의 전용 Child'를 추가로 생성한다.
+# 호 전체 Child와 목 단위 Child는 그대로 유지한다.
+# key: (조문 ID, 호번호 문자열에서 마지막 '.' 제거)
+DEFINITION_ONLY_RULES = {
+    ("제2조", "4"): (
+        "고영향 인공지능의 정의 문장 뒤에 가목부터 카목까지 11개 활용 영역이 "
+        "이어져 호 전체 Child에서 정의 문장의 비중이 낮아지므로, "
+        "정의 문장만 담는 Child를 추가한다."
     ),
 }
 
@@ -167,6 +180,60 @@ def build_subitem_children(item, item_id, parent_id, header, common_metadata, pa
 
     return children
 
+def extract_definition_term(item_content):
+    """
+    호내용에서 큰따옴표로 묶인 정의 용어를 추출한다.
+    추출에 실패하면 빈 문자열을 반환한다.
+    """
+
+    match = re.search(r'"([^"]+)"', item_content)
+
+    return match.group(1) if match else ""
+
+def build_definition_only_child(
+    item,
+    item_id,
+    parent_id,
+    header,
+    common_metadata,
+    paragraph_number,
+):
+    """
+    호 전체 Child와 목 단위 Child를 그대로 유지한 채,
+    정의 문장만 담는 Child를 추가로 생성한다.
+
+    source_text는 XML 호내용 원문만 사용하며 가목 이하 열거 목록은 제외한다.
+    text에는 검색을 돕기 위해 법령 약칭, 조문 제목, 정의 용어만 덧붙인다.
+    """
+
+    source_text = item["content"]
+    label = item["number"].rstrip(".")
+    term = extract_definition_term(source_text)
+
+    title_line = f"제{label}호 {term}".strip()
+
+    text = "\n".join([
+        LAW_SHORT_NAME,
+        header,
+        title_line,
+        "",
+        source_text,
+    ])
+
+    return {
+        "id": f"{item_id}-definition",
+        "parent_id": parent_id,
+        "chunk_type": "child",
+        **common_metadata,
+        "paragraph": paragraph_number,
+        "item": item["number"],
+        "subitem": "",
+        "granularity": "item",
+        "chunk_role": "definition_only",
+        "text": text,
+        "source_text": source_text,
+    }
+
 def build_article_chunks(parsed, chapter="", section=""):
     article_id = parsed["article"]
     title = parsed["title"]
@@ -230,6 +297,18 @@ def build_article_chunks(parsed, chapter="", section=""):
                     if SUBITEM_SPLIT_RULES.get(subitem_key) and item["subitems"]:
                         children.extend(
                             build_subitem_children(
+                                item=item,
+                                item_id=item_id,
+                                parent_id=parent_id,
+                                header=header,
+                                common_metadata=common_metadata,
+                                paragraph_number=paragraph["number"],
+                            )
+                        )
+
+                    if DEFINITION_ONLY_RULES.get(subitem_key):
+                        children.append(
+                            build_definition_only_child(
                                 item=item,
                                 item_id=item_id,
                                 parent_id=parent_id,
@@ -548,6 +627,41 @@ def validate_chunks(result):
             f"제2조제4호 가목~카목 세부 Child 누락: {missing_subitems}"
         )
 
+    # 제2조제4호 정의 전용 Child 검사
+    definition_id = f"{article2_item4_id}-definition"
+    child_map = {child["id"]: child for child in children}
+    definition_child = child_map.get(definition_id)
+
+    if definition_child is None:
+        raise ValueError("제2조제4호 정의 전용 Child가 존재하지 않습니다.")
+
+    if definition_child.get("chunk_role") != "definition_only":
+        raise ValueError(
+            f"정의 전용 Child의 chunk_role 오류: {definition_id}"
+        )
+
+    item4_child = child_map[article2_item4_id]
+
+    if definition_child["source_text"] not in item4_child["source_text"]:
+        raise ValueError(
+            "정의 전용 Child의 source_text가 제2조제4호 원문과 다릅니다."
+        )
+
+    if "\n" in definition_child["source_text"]:
+        raise ValueError(
+            "정의 전용 Child의 source_text에 가목 이하 열거 목록이 포함되었습니다."
+        )
+
+    definition_only_children = [
+        child for child in children
+        if child.get("chunk_role") == "definition_only"
+    ]
+
+    if len(definition_only_children) != 1:
+        raise ValueError(
+            f"정의 전용 Child 개수 불일치: {len(definition_only_children)} (기대값 1)"
+        )
+
     if article34_paragraph1_id not in child_ids:
         raise ValueError("제34조제1항 전체 Child가 존재하지 않습니다.")
 
@@ -713,6 +827,11 @@ def parse_law():
 
 BACKUP_PATH = BASE_DIR / "data" / "ai_basic_law" / "legal_chunks.backup.json"
 
+# 정의 전용 Child 추가 이전(205 Child) 스냅샷은 legal_chunks_v1.json에 보존되어
+# 있으며 이 스크립트에서 덮어쓰지 않는다. 현재 청킹 결과는 legal_chunks.json과
+# legal_chunks_v2.json에 함께 저장한다.
+V2_OUTPUT_PATH = BASE_DIR / "data" / "ai_basic_law" / "legal_chunks_v2.json"
+
 def backup_existing_output():
     """
     기존 결과 JSON을 덮어쓰기 전에 백업한다.
@@ -734,14 +853,14 @@ def main():
 
     backup_existing_output()
 
-    OUTPUT_PATH.write_text(
-        json.dumps(
-            result,
-            ensure_ascii=False,
-            indent=2,
-        ),
-        encoding="utf-8",
+    serialized = json.dumps(
+        result,
+        ensure_ascii=False,
+        indent=2,
     )
+
+    OUTPUT_PATH.write_text(serialized, encoding="utf-8")
+    V2_OUTPUT_PATH.write_text(serialized, encoding="utf-8")
 
     parents = result["parents"]
     children = result["children"]
@@ -789,6 +908,16 @@ def main():
             len(child["text"]),
             "chars",
         )
+
+    definition_only_children = [
+        c for c in children
+        if c.get("chunk_role") == "definition_only"
+    ]
+
+    print("\n===== 정의 전용 Child =====")
+
+    for child in definition_only_children:
+        print(child["id"], "|", child["article"], child["item"])
 
     granularity_counts = Counter(
         child["granularity"] for child in main_children

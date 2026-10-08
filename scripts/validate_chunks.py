@@ -6,6 +6,14 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 JSON_PATH = BASE_DIR / "data" / "ai_basic_law" / "legal_chunks.json"
 
+# 정의 전용 Child 추가 이전(205 Child) 스냅샷.
+# 기존 Child의 ID/text/source_text가 보존되었는지 비교하는 기준으로 사용한다.
+V1_JSON_PATH = BASE_DIR / "data" / "ai_basic_law" / "legal_chunks_v1.json"
+
+EXPECTED_V1_CHILD_COUNT = 205
+EXPECTED_CHILD_COUNT = 206
+EXPECTED_PARENT_COUNT = 49
+
 LAW_NUMBER = "21311"
 LAW_EFFECTIVE_DATE = "20260721"
 
@@ -70,7 +78,8 @@ def main():
     check("부칙 Parent 3개", len(supplementary_parents) == 3)
 
     # 4. 제2조제4호 / 제34조제1항 세부 Child 검사
-    article2_item4_id = f"{LAW_NUMBER}-{LAW_EFFECTIVE_DATE}-제2조-p1-i4"
+    article2_parent_id = f"{LAW_NUMBER}-{LAW_EFFECTIVE_DATE}-제2조"
+    article2_item4_id = f"{article2_parent_id}-p1-i4"
     subitem_labels = ["가", "나", "다", "라", "마", "바", "사", "아", "자", "차", "카"]
     expected_subitem_ids = [
         f"{article2_item4_id}-{label}" for label in subitem_labels
@@ -92,6 +101,105 @@ def main():
         "제34조제1항 제1호~제6호(6개) 세부 Child 존재",
         all(cid in child_ids for cid in expected_item_ids),
     )
+
+    # 4-1. 전체 Parent/Child 개수
+    check(
+        f"전체 Parent {EXPECTED_PARENT_COUNT}개",
+        len(parents) == EXPECTED_PARENT_COUNT,
+    )
+    check(
+        f"전체 Child {EXPECTED_CHILD_COUNT}개",
+        len(children) == EXPECTED_CHILD_COUNT,
+    )
+
+    supplementary_children = [
+        c for c in children if c["document_type"] == "supplementary"
+    ]
+    check("부칙 Child 8개 유지", len(supplementary_children) == 8)
+
+    # 4-2. 제2조제4호 정의 전용 Child 검사
+    child_map = {c["id"]: c for c in children}
+    definition_id = f"{article2_item4_id}-definition"
+    definition_child = child_map.get(definition_id)
+
+    definition_only_children = [
+        c for c in children if c.get("chunk_role") == "definition_only"
+    ]
+
+    check("제2조제4호 정의 전용 Child 존재", definition_child is not None)
+    check("정의 전용 Child 정확히 1개", len(definition_only_children) == 1)
+
+    if definition_child is not None:
+        item4_child = child_map[article2_item4_id]
+
+        check(
+            "정의 전용 Child chunk_role 정확",
+            definition_child.get("chunk_role") == "definition_only",
+        )
+        check(
+            "정의 전용 source_text가 제2조제4호 원문의 일부",
+            definition_child["source_text"] in item4_child["source_text"],
+        )
+        check(
+            "정의 전용 source_text에 가목 이하 열거 목록 미포함",
+            "\n" not in definition_child["source_text"],
+        )
+        check(
+            "정의 전용 Child granularity=item",
+            definition_child.get("granularity") == "item",
+        )
+        check(
+            "정의 전용 Child parent_id가 제2조 Parent",
+            definition_child.get("parent_id") == article2_parent_id,
+        )
+
+    # 4-3. v1 스냅샷 대비 기존 Child 보존 검사
+    v1_children = None
+
+    if V1_JSON_PATH.exists():
+        with open(V1_JSON_PATH, "r", encoding="utf-8") as file:
+            v1_children = json.load(file)["children"]
+
+    if v1_children is None:
+        check(
+            f"v1 스냅샷 존재 ({V1_JSON_PATH.name})",
+            False,
+        )
+    else:
+        v1_map = {c["id"]: c for c in v1_children}
+
+        check(
+            f"v1 스냅샷 Child {EXPECTED_V1_CHILD_COUNT}개",
+            len(v1_children) == EXPECTED_V1_CHILD_COUNT,
+        )
+        check(
+            "기존 Child ID 전체 유지",
+            set(v1_map).issubset(set(child_map)),
+        )
+
+        text_changed = [
+            cid for cid in v1_map
+            if cid in child_map
+            and (
+                v1_map[cid]["text"] != child_map[cid]["text"]
+                or v1_map[cid]["source_text"] != child_map[cid]["source_text"]
+            )
+        ]
+
+        check("기존 Child text/source_text 변경 없음", len(text_changed) == 0)
+
+        added_ids = sorted(set(child_map) - set(v1_map))
+
+        check(
+            "신규 Child는 정의 전용 Child 1개뿐",
+            added_ids == [definition_id],
+        )
+
+        if text_changed:
+            print("FAIL 상세 (기존 Child 변경):", text_changed)
+
+        if added_ids != [definition_id]:
+            print("FAIL 상세 (예상 밖 신규 Child):", added_ids)
 
     # 5. 본문 원문 보존 검사
     main_mismatch = []
@@ -173,6 +281,15 @@ def main():
 
     for granularity, count in sorted(granularity_counts.items()):
         print(granularity or "(미지정)", ":", count)
+
+    role_counts = Counter(
+        child.get("chunk_role", "") for child in children
+    )
+
+    print("\n===== chunk_role 분포 =====")
+
+    for role, count in sorted(role_counts.items()):
+        print(role or "(미지정)", ":", count)
 
     print("\n===== 주요 조문 =====")
     print("제2조 Child 수:", article_counts["제2조"])

@@ -1,0 +1,452 @@
+{
+  "q01": {
+    "correctness": 1.0,
+    "faithfulness": 0.9,
+    "hallucination_rate": 0.1,
+    "refused": false,
+    "reasoning": "필수 포함 사항인 ‘생명·신체 안전 및 기본권에 중대한 영향 또는 위험’과 ‘각 목 영역에서 활용’이 포함되어 있다. 다만 시행일·법률명 등은 제공된 근거에 직접 보이지 않는 추가 정보라 일부 비근거 진술이 있다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.224
+  },
+  "q02": {
+    "correctness": 1.0,
+    "faithfulness": 1.0,
+    "hallucination_rate": 0.0,
+    "refused": false,
+    "reasoning": "필수 포함 사항인 ‘입력 데이터의 구조와 특성을 모방하여 글, 소리, 그림, 영상 등을 생성하는 인공지능시스템’ 정의를 정확히 담고 있습니다. 근거에 없는 추가 설명도 없으며, 제시된 근거와 일치합니다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.034
+  },
+  "q37": {
+    "correctness": 1.0,
+    "faithfulness": 0.98,
+    "hallucination_rate": 0.02,
+    "refused": false,
+    "reasoning": "필수 포함 사항대로 구체적 방법과 평가 항목은 법률이 아니라 대통령령에 위임된다고 밝혀 핵심을 충족했습니다. 다만 법률조문 번호 등 일부 부수 설명은 제공 근거에 직접 명시되지 않아 아주 약간만 보수적으로 보았습니다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 1.882
+  },
+  "q03": {
+    "correctness": 1.0,
+    "faithfulness": 0.82,
+    "hallucination_rate": 0.18,
+    "refused": false,
+    "reasoning": "필수 포함 사항인 정의와 개발사업자/이용사업자 구분을 정확히 포함합니다. 다만 법률명과 시행일은 제공된 근거에 없어서 일부 근거 밖의 내용이 섞였습니다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 1.824
+  },
+  "q04": {
+    "correctness": 1.0,
+    "faithfulness": 0.96,
+    "hallucination_rate": 0.04,
+    "refused": false,
+    "reasoning": "필수 포함 사항인 인공지능 또는 인공지능기술을 활용한 제품의 개발·제조·유통 및 관련 서비스 제공을 정확히 설명했다. 다만 ‘시행일 2026.7.21’ 등은 제공된 근거에 없어서 일부 과잉 진술이 있다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 1.778
+  },
+  "q05": {
+    "correctness": 1.0,
+    "faithfulness": 0.86,
+    "hallucination_rate": 0.14,
+    "refused": false,
+    "reasoning": "필수 포함 사항인 ‘장애인·고령자 등 대통령령으로 정하는 취약계층’을 정확히 포함했다. 다만 시행일 등 근거에 없는 부가 정보가 있어 일부 비근거 주장이 있다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 1.871
+  },
+  "q06": {
+    "correctness": 1.0,
+    "faithfulness": 0.9,
+    "hallucination_rate": 0.1,
+    "refused": false,
+    "reasoning": "필수 포함 사항인 ‘생성형 인공지능에 의하여 생성되었다는 사실을 표시’가 명확히 포함되어 있다. 다만 시행일·법률명 등은 제공된 근거에 직접 보이지 않아 일부는 근거 밖 주장으로 보인다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 1.767
+  },
+  "q07": {
+    "correctness": 1.0,
+    "faithfulness": 0.95,
+    "hallucination_rate": 0.05,
+    "refused": false,
+    "reasoning": "필수 포함 사항인 '제품·서비스가 해당 인공지능에 기반하여 운용된다는 사실을 사전에 고지'를 정확히 포함하고 있다. 다만 제31조 조문번호, 생성형 인공지능 관련 추가 설명 등은 제공된 근거 밖의 내용이 섞여 있어 약간의 비율로만 비사실 가능성이 있다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 1.947
+  },
+  "q08": {
+    "correctness": 0.75,
+    "faithfulness": 0.55,
+    "hallucination_rate": 0.45,
+    "refused": false,
+    "reasoning": "필수 포함 사항인 위험관리방안, 이용자 보호 방안, 사람의 관리·감독, 문서 작성·보관을 모두 포함해 핵심은 잘 답했습니다. 다만 제공된 근거에는 없는 설명방안, 시행일, 법률명 등 추가 내용이 섞여 있어 일부는 근거 초과입니다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.285
+  },
+  "q09": {
+    "correctness": 1.0,
+    "faithfulness": 0.78,
+    "hallucination_rate": 0.22,
+    "refused": false,
+    "reasoning": "위험의 식별·평가·완화와 위험관리체계 구축, 그리고 이행 결과의 장관 제출을 모두 포함해 핵심 요점을 충실히 답했다. 다만 적용 법률명과 시행일, 조문번호 등은 제공된 근거에 없어서 일부 내용이 근거 밖 진술이다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.062
+  },
+  "q10": {
+    "correctness": 1.0,
+    "faithfulness": 1.0,
+    "hallucination_rate": 0.0,
+    "refused": false,
+    "reasoning": "사전에 고영향 인공지능 해당 여부를 검토해야 하고, 필요하면 과학기술정보통신부장관에게 확인 요청이 가능하다는 필수 요점을 정확히 포함했다. 근거 문언과도 일치하며, 추가 설명도 모순되지 않는다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.0
+  },
+  "q11": {
+    "correctness": 1.0,
+    "faithfulness": 0.75,
+    "hallucination_rate": 0.25,
+    "refused": false,
+    "reasoning": "필수 포함 사항인 ‘이용자가 명확하게 인식할 수 있는 방식의 고지 또는 표시’와 ‘예술적·창의적 표현물은 전시·향유를 저해하지 않는 방식 가능’이 모두 포함되어 있다. 다만 대통령령, 시행일, 법률명 등 근거에 없는 추가 정보가 있어 일부 환각이 있다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 1.98
+  },
+  "q12": {
+    "correctness": 1.0,
+    "faithfulness": 0.86,
+    "hallucination_rate": 0.14,
+    "refused": false,
+    "reasoning": "핵심 요점인 ‘최종결과 도출에 활용된 주요 기준 및 원리에 대해 기술적·합리적으로 가능한 범위에서 명확하고 의미 있는 설명을 받을 수 있다’를 정확히 포함합니다. 다만 제3조제2항, 제34조제1항제2호 등 조문번호와 적용 법률명·시행일은 제공된 근거에 없고 일부는 근거 외 정보라서 신뢰도는 약간 낮습니다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.29
+  },
+  "q13": {
+    "correctness": 0.95,
+    "faithfulness": 0.72,
+    "hallucination_rate": 0.28,
+    "refused": false,
+    "reasoning": "생성형 인공지능 결과물 표시와 실제와 구분하기 어려운 영상의 명확한 고지라는 핵심 요점을 잘 포함했다. 다만 제31조 조문번호, 대통령령 언급, 시행일 등 근거에 없는 세부 내용이 섞여 있어 일부는 과잉 진술이다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.215
+  },
+  "q14": {
+    "correctness": 1.0,
+    "faithfulness": 0.86,
+    "hallucination_rate": 0.14,
+    "refused": false,
+    "reasoning": "생성형 인공지능 서비스는 사전에 AI 기반 운용 사실을 고지해야 한다는 필수 요점을 정확히 포함했다. 다만 시행일, 법률명 등 근거에 없는 정보와 제31조 제4항 언급은 제공된 근거만으로 직접 뒷받침되진 않는다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 1.857
+  },
+  "q15": {
+    "correctness": 0.9,
+    "faithfulness": 0.72,
+    "hallucination_rate": 0.28,
+    "refused": false,
+    "reasoning": "핵심 요점인 채용 평가가 고영향 인공지능에 해당할 수 있다는 점과 영향평가 필요성을 잘 포함했다. 다만 제35조 제2항, 적용 법률명·시행일 등 제공 근거에 없는 내용이 섞여 있어 일부 환각이 있다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 1.922
+  },
+  "q16": {
+    "correctness": 0.8,
+    "faithfulness": 0.3,
+    "hallucination_rate": 0.7,
+    "refused": false,
+    "reasoning": "대출 심사가 고영향 인공지능 영역이라는 핵심은 포함했지만, 필수 포함 사항인 사업자의 위험관리·이용자 보호 조치 이행은 직접 답하지 못했습니다. 또한 제시 근거에는 없는 제40조, 시정명령, 시행일 등 여러 내용이 포함되어 있어 근거 일치성이 낮습니다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.146
+  },
+  "q17": {
+    "correctness": 0.1,
+    "faithfulness": 0.4,
+    "hallucination_rate": 0.6,
+    "refused": true,
+    "reasoning": "핵심 정답 요점인 ‘국외 행위라도 국내 시장 또는 이용자에게 영향을 미치면 적용’을 포함하지 않았고, 오히려 적용 여부를 단정할 수 없다고 회피했습니다. 근거에 없는 조문 내용과 시행일·법률명 등도 포함되어 있어 뒷받침되지 않는 주장 비중이 큽니다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 1.937
+  },
+  "q18": {
+    "correctness": 1.0,
+    "faithfulness": 0.92,
+    "hallucination_rate": 0.08,
+    "refused": false,
+    "reasoning": "정답 요점인 ‘3천만원 이하의 과태료’를 정확히 포함하고 있습니다. 다만 부과·징수 주체나 법률명 등 일부 추가 설명은 제공된 근거에 직접 보이지 않는 부분이 있어 faithfulness를 약간 낮게 봤습니다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.302
+  },
+  "q19": {
+    "correctness": 0.2,
+    "faithfulness": 0.35,
+    "hallucination_rate": 0.75,
+    "refused": false,
+    "reasoning": "답변은 조사·시정명령 가능성은 언급했지만, 필수 포함 사항인 ‘명령 불이행 시 3천만원 이하 과태료’를 핵심적으로 누락했고 오히려 근거에 없는 조문번호와 출입조사, 시행일 등을 제시했습니다. 또한 제공된 근거만으로는 벌칙을 확인할 수 없다고 하여 질문에 대한 직접 답변이 충분하지 않습니다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.411
+  },
+  "q20": {
+    "correctness": 1.0,
+    "faithfulness": 0.95,
+    "hallucination_rate": 0.05,
+    "refused": false,
+    "reasoning": "핵심 처벌 수위인 ‘3년 이하의 징역 또는 3천만원 이하의 벌금’을 정확히 포함했다. 부가적으로 예외 규정과 법률명·시행일을 덧붙였는데, 이는 근거에 일부 포함되거나 큰 문제는 없지만 질문 핵심과 직접 관련은 덜하다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.102
+  },
+  "q21": {
+    "correctness": 1.0,
+    "faithfulness": 0.72,
+    "hallucination_rate": 0.28,
+    "refused": false,
+    "reasoning": "과태료 액수인 ‘3천만원 이하’를 정확히 포함해 정답 요점을 충족합니다. 다만 적용 법률명, 시행일, 제31조제1항의 구체적 내용은 제공 근거에 없어서 일부는 근거 밖의 설명입니다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 1.973
+  },
+  "q22": {
+    "correctness": 1.0,
+    "faithfulness": 0.86,
+    "hallucination_rate": 0.14,
+    "refused": false,
+    "reasoning": "필수 포함 사항인 ‘대통령령에 따라 과학기술정보통신부장관이 부과·징수’가 정확히 포함되어 있습니다. 다만 적용 법률명과 시행일은 제공된 근거에 없어서 일부 비근거 정보가 섞였습니다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 1.787
+  },
+  "q23": {
+    "correctness": 0.0,
+    "faithfulness": 0.7,
+    "hallucination_rate": 0.3,
+    "refused": false,
+    "reasoning": "답변은 제34조의 안전성·신뢰성 확보 조치를 비교적 상세히 설명했지만, 필수 포함 사항인 제33조의 사전 고영향 여부 검토와 제35조의 사전 영향평가 노력을 포함하지 않았습니다. 제공된 근거와 대체로 부합하나, 법률명·시행일 등 근거 밖 정보가 포함되어 일부는 뒷받침이 부족합니다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.321
+  },
+  "q24": {
+    "correctness": 1.0,
+    "faithfulness": 0.95,
+    "hallucination_rate": 0.05,
+    "refused": false,
+    "reasoning": "필수 포함 사항인 '이용자 수·매출액 기준 충족 시 국내대리인을 서면으로 지정하고 신고'를 정확히 포함했습니다. 근거에 없는 세부 설명은 거의 없고, 전반적으로 제공된 근거에 부합합니다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.093
+  },
+  "q25": {
+    "correctness": 0.5,
+    "faithfulness": 0.72,
+    "hallucination_rate": 0.28,
+    "refused": false,
+    "reasoning": "인공지능안전연구소는 포함했지만 필수 포함 사항인 인공지능정책센터(제11조)는 언급하지 않았습니다. 과학기술정보통신부장관을 기관처럼 제시한 부분과 법조문 번호 일부는 제공 근거로 직접 확인되지 않아 일부 부정확합니다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.093
+  },
+  "q26": {
+    "correctness": 0.95,
+    "faithfulness": 0.86,
+    "hallucination_rate": 0.14,
+    "refused": false,
+    "reasoning": "주요 정책 심의·의결과 기본계획의 수립·변경 관련 사항을 명확히 포함해 정답 요점을 충분히 반영했습니다. 다만 제8조제2항·제3항의 권고/의견표명과 후속의무 등 근거에 없는 추가 설명이 일부 있어 신뢰도는 약간 낮아집니다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.171
+  },
+  "q27": {
+    "correctness": 0.1,
+    "faithfulness": 0.2,
+    "hallucination_rate": 0.8,
+    "refused": true,
+    "reasoning": "정답 요점인 ‘3년마다 과학기술정보통신부장관이 수립·변경·시행’이 제시되지 않았고, 오히려 확인할 수 없다고 답해 핵심을 놓쳤습니다. 다만 일부 근거 조항 설명은 맞지만, 마지막에 법률명·시행일을 덧붙인 부분은 제공 근거로 뒷받침되지 않습니다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.106
+  },
+  "q28": {
+    "correctness": 1.0,
+    "faithfulness": 0.98,
+    "hallucination_rate": 0.02,
+    "refused": false,
+    "reasoning": "경제적 여건으로 이용이 어려운 사람에게 예산 범위에서 전부 또는 일부 지원 가능하다는 핵심을 정확히 포함했다. 다만 적용 법률명·시행일 등은 근거에 직접 제시되지 않아 약간의 비근거 내용이 있다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.049
+  },
+  "q29": {
+    "correctness": 1.0,
+    "faithfulness": 0.82,
+    "hallucination_rate": 0.18,
+    "refused": false,
+    "reasoning": "필수 포함 사항인 3명 이상의 발기인과 과학기술정보통신부장관의 허가를 모두 포함했다. 다만 시행일 등 근거에 없는 부가 정보가 있어 일부 비근거 주장도 있다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.235
+  },
+  "q30": {
+    "correctness": 0.95,
+    "faithfulness": 0.92,
+    "hallucination_rate": 0.08,
+    "refused": false,
+    "reasoning": "핵심 정답 요점인 과기정통부장관이 혁신적인 인공지능기술 확보를 위해 필요 시 연구기관을 설립·운영할 수 있다는 점을 정확히 포함했다. 다만 법률명과 시행일 등 근거에 없는 추가 정보가 있어 일부는 뒷받침이 부족하다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 1.858
+  },
+  "q31": {
+    "correctness": 1.0,
+    "faithfulness": 0.76,
+    "hallucination_rate": 0.24,
+    "refused": false,
+    "reasoning": "필수 포함 사항인 국가·지방자치단체·공공기관의 출자금과 그 밖의 출자금 및 부대수입을 모두 포함해 핵심은 정확히 답했다. 다만 조문 번호와 시행일 등 근거에 없는 추가 정보가 섞여 있어 일부 비근거 주장으로 평가된다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.096
+  },
+  "q32": {
+    "correctness": 1.0,
+    "faithfulness": 0.95,
+    "hallucination_rate": 0.05,
+    "refused": false,
+    "reasoning": "접근성의 핵심을 ‘모든 사람이 자유롭고 편리하게 이용할 수 있는 것’으로 정확히 제시해 필수 포함 사항을 충족합니다. 다만 적용 법률명과 시행일은 제공 근거에 없어서 일부는 근거 밖 정보입니다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 1.912
+  },
+  "q33": {
+    "correctness": 0.95,
+    "faithfulness": 0.98,
+    "hallucination_rate": 0.02,
+    "refused": false,
+    "reasoning": "정부가 대통령령에 따라 윤리원칙을 제정·공표할 수 있다고 정확히 답했고, 과기정통부장관의 실천방안 수립도 함께 설명해 정답 요점을 잘 포함한다. 다만 적용 법률명·시행일은 제공 근거에 없으므로 일부 부가 내용은 근거 외 정보다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.293
+  },
+  "q34": {
+    "correctness": 1.0,
+    "faithfulness": 0.78,
+    "hallucination_rate": 0.22,
+    "refused": false,
+    "reasoning": "민간자율인공지능윤리위원회를 둘 수 있다는 핵심과 대상 기관(교육·연구기관, 인공지능사업자 등)을 정확히 포함한다. 다만 적용 법률명과 시행일 같은 내용은 제공된 근거에 없어서 일부 과잉설명이 있다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.218
+  },
+  "q35": {
+    "correctness": 1.0,
+    "faithfulness": 0.88,
+    "hallucination_rate": 0.12,
+    "refused": false,
+    "reasoning": "핵심 질문에 대해 과기정통부장관이 검·인증등 활동을 지원할 수 있다고 정확히 답했고, 지원 사업 예시도 근거와 일치합니다. 다만 제12조 관련 설명과 시행일 언급은 제공된 근거에 없어서 일부 과잉 서술이 있습니다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 1.931
+  },
+  "q36": {
+    "correctness": 1.0,
+    "faithfulness": 0.84,
+    "hallucination_rate": 0.16,
+    "refused": false,
+    "reasoning": "정부의 데이터센터 구축·운영 활성화 시책 추진과 행정적·재정적 지원을 정확히 포함해 정답 요점을 충족한다. 다만 법률명·시행일 등 제공 근거에 없는 추가 정보가 있어 일부 비근거 진술이 있다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.067
+  },
+  "q38": {
+    "correctness": 0.95,
+    "faithfulness": 0.9,
+    "hallucination_rate": 0.1,
+    "refused": false,
+    "reasoning": "법률에 세부 수치가 없고 대통령령에 위임된다는 핵심 취지를 사실상 잘 반영했습니다. 다만 가이드라인·대통령령 언급은 제공 근거 범위에서 일부 추론이 섞여 있어 약간의 비약이 있습니다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.02
+  },
+  "q39": {
+    "correctness": 0.35,
+    "faithfulness": 0.72,
+    "hallucination_rate": 0.28,
+    "refused": false,
+    "reasoning": "과징금이 아니라 과태료·벌칙만 규정되어 있어 과징금 금액을 답할 수 없다는 핵심은 포함했지만, 최종적으로 조문 번호와 시행일 등 근거에 없는 정보가 섞여 있습니다. 다만 답변 거부가 아니라 근거 범위 내에서 실질적으로 설명했습니다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.218
+  },
+  "q40": {
+    "correctness": 0.3,
+    "faithfulness": 0.25,
+    "hallucination_rate": 0.75,
+    "refused": false,
+    "reasoning": "정답 요점인 ‘이 법은 자율주행차 사고 보상을 규정하지 않음’은 일부 포함했지만, 실제로는 다른 법률 가능성 등 부가 설명이 많아 핵심에 맞게 단정적으로 답하지는 않았습니다. 또한 제시된 근거에 없는 조문 번호와 시행일 등은 근거로 뒷받침되지 않아 사실상 환각 비율이 높습니다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.007
+  },
+  "q41": {
+    "correctness": 0.0,
+    "faithfulness": 0.28,
+    "hallucination_rate": 0.72,
+    "refused": false,
+    "reasoning": "정답 요점은 ‘법률에 손해배상 규정이 없어 답변 불가’인데, 답변은 오히려 일부 조문을 근거로 배상 가능성 등을 설명해 핵심을 놓쳤습니다. 제공된 근거에 없는 조문 번호·해석을 포함해 뒷받침되지 않는 내용이 많습니다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.324
+  },
+  "q42": {
+    "correctness": 1.0,
+    "faithfulness": 1.0,
+    "hallucination_rate": 0.0,
+    "refused": false,
+    "reasoning": "특허 출원 절차에 관한 규정이 없어서 답변할 수 없다고 명확히 밝혀 정답 요점을 충족합니다. 근거로 확인되는 범위만 언급했고, 근거에 없는 절차 설명은 하지 않았습니다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.357
+  },
+  "q43": {
+    "correctness": 0.2,
+    "faithfulness": 0.88,
+    "hallucination_rate": 0.12,
+    "refused": false,
+    "reasoning": "세금 감면 규정이 법률에 없다는 핵심 요점을 직접적으로 답하지 못하고, 오히려 다른 세법을 봐야 한다는 식으로 유보했습니다. 다만 제공된 근거에는 세제 혜택 내용이 없어, 근거에 반하는 주장은 거의 없습니다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.315
+  },
+  "q44": {
+    "correctness": 1.0,
+    "faithfulness": 0.93,
+    "hallucination_rate": 0.07,
+    "refused": false,
+    "reasoning": "법률에 예산 금액이 명시되어 있지 않아 답변 불가하다고 핵심을 정확히 밝혔습니다. 다만 조문 번호와 법률명 일부를 덧붙인 부분은 근거에 직접 없지만, 전체 취지는 근거와 대체로 부합합니다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.181
+  },
+  "q45": {
+    "correctness": 0.95,
+    "faithfulness": 0.92,
+    "hallucination_rate": 0.08,
+    "refused": false,
+    "reasoning": "자격증 시험의 응시요건이 법률 근거에 없다고 밝혀 핵심 취지에 맞게 답했습니다. 다만 조문 번호와 시행일 등 근거에 없는 추가 정보가 일부 포함되어 있습니다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.052
+  }
+}

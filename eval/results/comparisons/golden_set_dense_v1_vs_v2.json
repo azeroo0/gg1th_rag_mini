@@ -1,0 +1,234 @@
+{
+  "experiment_name": "golden_set_dense_v1_vs_v2",
+  "collection_name": {
+    "v1": "beopjeong_law_v1",
+    "v2": "beopjeong_law_v2"
+  },
+  "embedding_model": "text-embedding-3-small",
+  "dataset_version": {
+    "v1": "legal_chunks_v1.json (Child 205)",
+    "v2": "legal_chunks_v2.json (Child 206)"
+  },
+  "golden_set_path": "/mnt/c/Users/Admin/gg1th_rag_mini/eval/golden_set_v2.jsonl",
+  "golden_set_field_usage": {
+    "question": "question",
+    "qid": "id",
+    "answerable": "answerable",
+    "category": "type",
+    "references": "answer_articles"
+  },
+  "total_questions": 45,
+  "answerable_question_count": 36,
+  "unanswerable_question_count": 9,
+  "top_k": 5,
+  "execution_timestamp": "20261008T155724",
+  "evaluation_metrics": {
+    "v1": {
+      "article_level": {
+        "question_count": 36,
+        "hit_at_1": 0.6667,
+        "hit_at_3": 0.8611,
+        "hit_at_5": 0.8611,
+        "recall_at_5": 0.8009,
+        "mrr": 0.75
+      },
+      "provision_level": {
+        "question_count": 36,
+        "hit_at_1": 0.6667,
+        "hit_at_3": 0.7778,
+        "hit_at_5": 0.8611,
+        "recall_at_5": 0.8009,
+        "mrr": 0.7338
+      },
+      "precise_diagnosis": {
+        "question_count": 0,
+        "hit_at_1": null,
+        "hit_at_3": null,
+        "hit_at_5": null,
+        "recall_at_5": null,
+        "mrr": null
+      },
+      "gold_reference_depth_counts": {
+        "article": 44
+      },
+      "answerable_question_count": 36,
+      "unanswerable_question_count": 9,
+      "note": "article_level은 조문(제N조) 단위 적중률이며 세부 조항 적중률이 아니다. precise_diagnosis는 정답이 항ㆍ호ㆍ목까지 지정된 질문만 조문 경로 완전 일치로 평가한 결과다."
+    },
+    "v2": {
+      "article_level": {
+        "question_count": 36,
+        "hit_at_1": 0.6944,
+        "hit_at_3": 0.8611,
+        "hit_at_5": 0.8611,
+        "recall_at_5": 0.8009,
+        "mrr": 0.7639
+      },
+      "provision_level": {
+        "question_count": 36,
+        "hit_at_1": 0.6944,
+        "hit_at_3": 0.7778,
+        "hit_at_5": 0.8611,
+        "recall_at_5": 0.8009,
+        "mrr": 0.7463
+      },
+      "precise_diagnosis": {
+        "question_count": 0,
+        "hit_at_1": null,
+        "hit_at_3": null,
+        "hit_at_5": null,
+        "recall_at_5": null,
+        "mrr": null
+      },
+      "gold_reference_depth_counts": {
+        "article": 44
+      },
+      "answerable_question_count": 36,
+      "unanswerable_question_count": 9,
+      "note": "article_level은 조문(제N조) 단위 적중률이며 세부 조항 적중률이 아니다. precise_diagnosis는 정답이 항ㆍ호ㆍ목까지 지정된 질문만 조문 경로 완전 일치로 평가한 결과다."
+    }
+  },
+  "metric_rows": [
+    {
+      "level": "article_level",
+      "metric": "hit_at_1",
+      "v1": 0.6667,
+      "v2": 0.6944,
+      "delta": 0.0277
+    },
+    {
+      "level": "article_level",
+      "metric": "hit_at_3",
+      "v1": 0.8611,
+      "v2": 0.8611,
+      "delta": 0.0
+    },
+    {
+      "level": "article_level",
+      "metric": "hit_at_5",
+      "v1": 0.8611,
+      "v2": 0.8611,
+      "delta": 0.0
+    },
+    {
+      "level": "article_level",
+      "metric": "recall_at_5",
+      "v1": 0.8009,
+      "v2": 0.8009,
+      "delta": 0.0
+    },
+    {
+      "level": "article_level",
+      "metric": "mrr",
+      "v1": 0.75,
+      "v2": 0.7639,
+      "delta": 0.0139
+    },
+    {
+      "level": "provision_level",
+      "metric": "hit_at_1",
+      "v1": 0.6667,
+      "v2": 0.6944,
+      "delta": 0.0277
+    },
+    {
+      "level": "provision_level",
+      "metric": "hit_at_3",
+      "v1": 0.7778,
+      "v2": 0.7778,
+      "delta": 0.0
+    },
+    {
+      "level": "provision_level",
+      "metric": "hit_at_5",
+      "v1": 0.8611,
+      "v2": 0.8611,
+      "delta": 0.0
+    },
+    {
+      "level": "provision_level",
+      "metric": "recall_at_5",
+      "v1": 0.8009,
+      "v2": 0.8009,
+      "delta": 0.0
+    },
+    {
+      "level": "provision_level",
+      "metric": "mrr",
+      "v1": 0.7338,
+      "v2": 0.7463,
+      "delta": 0.0125
+    },
+    {
+      "level": "precise_diagnosis",
+      "metric": "hit_at_1",
+      "v1": null,
+      "v2": null,
+      "delta": null
+    },
+    {
+      "level": "precise_diagnosis",
+      "metric": "hit_at_3",
+      "v1": null,
+      "v2": null,
+      "delta": null
+    },
+    {
+      "level": "precise_diagnosis",
+      "metric": "hit_at_5",
+      "v1": null,
+      "v2": null,
+      "delta": null
+    },
+    {
+      "level": "precise_diagnosis",
+      "metric": "recall_at_5",
+      "v1": null,
+      "v2": null,
+      "delta": null
+    },
+    {
+      "level": "precise_diagnosis",
+      "metric": "mrr",
+      "v1": null,
+      "v2": null,
+      "delta": null
+    }
+  ],
+  "question_changes": {
+    "article_level": {
+      "improved": [
+        {
+          "qid": "q01",
+          "v1_first_hit_rank": 2,
+          "v2_first_hit_rank": 1
+        }
+      ],
+      "regressed": [],
+      "unchanged_count": 35
+    },
+    "provision_level": {
+      "improved": [
+        {
+          "qid": "q01",
+          "v1_first_hit_rank": 2,
+          "v2_first_hit_rank": 1
+        }
+      ],
+      "regressed": [
+        {
+          "qid": "q12",
+          "v1_first_hit_rank": 4,
+          "v2_first_hit_rank": 5
+        }
+      ],
+      "unchanged_count": 34
+    },
+    "precise_diagnosis": {
+      "improved": [],
+      "regressed": [],
+      "unchanged_count": 0
+    }
+  },
+  "retrieval_results": null
+}

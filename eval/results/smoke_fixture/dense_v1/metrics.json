@@ -1,0 +1,1005 @@
+{
+  "experiment_name": "dense_v1_golden_set",
+  "collection_name": "beopjeong_law_v1",
+  "embedding_model": "text-embedding-3-small",
+  "dataset_version": "legal_chunks_v1.json (Child 205)",
+  "golden_set_path": "/tmp/claude-1000/-mnt-c-Users-Admin-gg1th-rag-mini/610d9f42-ce6f-4245-a754-44cc264c14a7/scratchpad/smoke_golden_set.jsonl",
+  "golden_set_field_usage": {
+    "question": "question",
+    "qid": "qid",
+    "answerable": "answerable",
+    "category": "category",
+    "references": "gold_article_ids"
+  },
+  "total_questions": 7,
+  "top_k": 5,
+  "execution_timestamp": "20261008T151256",
+  "retrieval_results": null,
+  "evaluation_metrics": {
+    "article_level": {
+      "question_count": 6,
+      "hit_at_1": 0.3333,
+      "hit_at_3": 0.8333,
+      "hit_at_5": 0.8333,
+      "recall_at_5": 0.75,
+      "mrr": 0.5556
+    },
+    "provision_level": {
+      "question_count": 6,
+      "hit_at_1": 0.3333,
+      "hit_at_3": 0.6667,
+      "hit_at_5": 0.8333,
+      "recall_at_5": 0.75,
+      "mrr": 0.5139
+    },
+    "precise_diagnosis": {
+      "question_count": 6,
+      "hit_at_1": 0.1667,
+      "hit_at_3": 0.1667,
+      "hit_at_5": 0.5,
+      "recall_at_5": 0.4167,
+      "mrr": 0.2417
+    },
+    "gold_reference_depth_counts": {
+      "item": 4,
+      "subitem": 1,
+      "paragraph": 2
+    },
+    "answerable_question_count": 6,
+    "unanswerable_question_count": 1,
+    "note": "article_level은 조문(제N조) 단위 적중률이며 세부 조항 적중률이 아니다. precise_diagnosis는 정답이 항ㆍ호ㆍ목까지 지정된 질문만 조문 경로 완전 일치로 평가한 결과다."
+  },
+  "per_question": {
+    "article_level": [
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 2,
+        "hits": {
+          "1": false,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 0.5,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.598453,
+            "id": "21311-20260721-제34조-p1-i2",
+            "article_path": "제34조제1항제2호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.58931,
+            "id": "21311-20260721-제2조-p1-i4-바",
+            "article_path": "제2조제4호바목",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "S1"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 3,
+        "hits": {
+          "1": false,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 0.3333333333333333,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.581183,
+            "id": "21311-20260721-제34조-p1-i2",
+            "article_path": "제34조제1항제2호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.567248,
+            "id": "21311-20260721-제35조-p1",
+            "article_path": "제35조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.554473,
+            "id": "21311-20260721-제2조-p1-i4-바",
+            "article_path": "제2조제4호바목",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "S2"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": null,
+        "hits": {
+          "1": false,
+          "3": false,
+          "5": false
+        },
+        "recall_at_5": 0.0,
+        "reciprocal_rank": 0.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.58121,
+            "id": "21311-20260721-제34조-p1-i2",
+            "article_path": "제34조제1항제2호",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "S3"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.689314,
+            "id": "21311-20260721-제34조-p1",
+            "article_path": "제34조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "S4"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 2,
+        "hits": {
+          "1": false,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 0.5,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.558473,
+            "id": "21311-20260721-제31조-p2",
+            "article_path": "제31조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.556211,
+            "id": "21311-20260721-제2조-p1-i2",
+            "article_path": "제2조제2호",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "S5"
+      },
+      {
+        "level": "article",
+        "exact": false,
+        "gold_count": 2,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 0.5,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.746216,
+            "id": "21311-20260721-제34조-p1-i2",
+            "article_path": "제34조제1항제2호",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "S6"
+      }
+    ],
+    "provision_level": [
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 2,
+        "hits": {
+          "1": false,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 0.5,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.598453,
+            "id": "21311-20260721-제34조-p1-i2",
+            "article_path": "제34조제1항제2호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.58931,
+            "id": "21311-20260721-제2조-p1-i4-바",
+            "article_path": "제2조제4호바목",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.577837,
+            "id": "21311-20260721-제34조-p1-i1",
+            "article_path": "제34조제1항제1호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.576785,
+            "id": "21311-20260721-제34조-p1-i4",
+            "article_path": "제34조제1항제4호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.57593,
+            "id": "21311-20260721-제2조-p1-i4-사",
+            "article_path": "제2조제4호사목",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "S1"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 3,
+        "hits": {
+          "1": false,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 0.3333333333333333,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.581183,
+            "id": "21311-20260721-제34조-p1-i2",
+            "article_path": "제34조제1항제2호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.567248,
+            "id": "21311-20260721-제35조-p1",
+            "article_path": "제35조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.554473,
+            "id": "21311-20260721-제2조-p1-i4-바",
+            "article_path": "제2조제4호바목",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.552983,
+            "id": "21311-20260721-제34조-p1",
+            "article_path": "제34조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.551933,
+            "id": "21311-20260721-제34조-p1-i3",
+            "article_path": "제34조제1항제3호",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "S2"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": null,
+        "hits": {
+          "1": false,
+          "3": false,
+          "5": false
+        },
+        "recall_at_5": 0.0,
+        "reciprocal_rank": 0.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.58121,
+            "id": "21311-20260721-제34조-p1-i2",
+            "article_path": "제34조제1항제2호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.56335,
+            "id": "21311-20260721-제34조-p1-i4",
+            "article_path": "제34조제1항제4호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.560651,
+            "id": "21311-20260721-제34조-p1-i3",
+            "article_path": "제34조제1항제3호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.558631,
+            "id": "21311-20260721-제34조-p1-i6",
+            "article_path": "제34조제1항제6호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.558487,
+            "id": "21311-20260721-제34조-p1",
+            "article_path": "제34조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "S3"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.689314,
+            "id": "21311-20260721-제34조-p1",
+            "article_path": "제34조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.683703,
+            "id": "21311-20260721-제34조-p1-i1",
+            "article_path": "제34조제1항제1호",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.681845,
+            "id": "21311-20260721-제34조-p1-i4",
+            "article_path": "제34조제1항제4호",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.677644,
+            "id": "21311-20260721-제34조-p1-i6",
+            "article_path": "제34조제1항제6호",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.671354,
+            "id": "21311-20260721-제34조-p1-i5",
+            "article_path": "제34조제1항제5호",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "S4"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 1,
+        "first_hit_rank": 4,
+        "hits": {
+          "1": false,
+          "3": false,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 0.25,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.558473,
+            "id": "21311-20260721-제31조-p2",
+            "article_path": "제31조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.556211,
+            "id": "21311-20260721-제2조-p1-i2",
+            "article_path": "제2조제2호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.545783,
+            "id": "21311-20260721-제2조-p1-i3",
+            "article_path": "제2조제3호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.545583,
+            "id": "21311-20260721-제2조-p1-i5",
+            "article_path": "제2조제5호",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.543568,
+            "id": "21311-20260721-제2조-p1-i6",
+            "article_path": "제2조제6호",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "S5"
+      },
+      {
+        "level": "provision",
+        "exact": false,
+        "gold_count": 2,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 0.5,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.746216,
+            "id": "21311-20260721-제34조-p1-i2",
+            "article_path": "제34조제1항제2호",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.731658,
+            "id": "21311-20260721-제34조-p1-i1",
+            "article_path": "제34조제1항제1호",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.730934,
+            "id": "21311-20260721-제34조-p1-i6",
+            "article_path": "제34조제1항제6호",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.727393,
+            "id": "21311-20260721-제34조-p1-i4",
+            "article_path": "제34조제1항제4호",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.718992,
+            "id": "21311-20260721-제34조-p1",
+            "article_path": "제34조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "S6"
+      }
+    ],
+    "precise_diagnosis": [
+      {
+        "level": "provision",
+        "exact": true,
+        "gold_count": 1,
+        "first_hit_rank": null,
+        "hits": {
+          "1": false,
+          "3": false,
+          "5": false
+        },
+        "recall_at_5": 0.0,
+        "reciprocal_rank": 0.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.598453,
+            "id": "21311-20260721-제34조-p1-i2",
+            "article_path": "제34조제1항제2호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.58931,
+            "id": "21311-20260721-제2조-p1-i4-바",
+            "article_path": "제2조제4호바목",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.577837,
+            "id": "21311-20260721-제34조-p1-i1",
+            "article_path": "제34조제1항제1호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.576785,
+            "id": "21311-20260721-제34조-p1-i4",
+            "article_path": "제34조제1항제4호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.57593,
+            "id": "21311-20260721-제2조-p1-i4-사",
+            "article_path": "제2조제4호사목",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "S1",
+        "gold_depths": [
+          "item"
+        ]
+      },
+      {
+        "level": "provision",
+        "exact": true,
+        "gold_count": 1,
+        "first_hit_rank": null,
+        "hits": {
+          "1": false,
+          "3": false,
+          "5": false
+        },
+        "recall_at_5": 0.0,
+        "reciprocal_rank": 0.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.581183,
+            "id": "21311-20260721-제34조-p1-i2",
+            "article_path": "제34조제1항제2호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.567248,
+            "id": "21311-20260721-제35조-p1",
+            "article_path": "제35조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.554473,
+            "id": "21311-20260721-제2조-p1-i4-바",
+            "article_path": "제2조제4호바목",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.552983,
+            "id": "21311-20260721-제34조-p1",
+            "article_path": "제34조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.551933,
+            "id": "21311-20260721-제34조-p1-i3",
+            "article_path": "제34조제1항제3호",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "S2",
+        "gold_depths": [
+          "item"
+        ]
+      },
+      {
+        "level": "provision",
+        "exact": true,
+        "gold_count": 1,
+        "first_hit_rank": null,
+        "hits": {
+          "1": false,
+          "3": false,
+          "5": false
+        },
+        "recall_at_5": 0.0,
+        "reciprocal_rank": 0.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.58121,
+            "id": "21311-20260721-제34조-p1-i2",
+            "article_path": "제34조제1항제2호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.56335,
+            "id": "21311-20260721-제34조-p1-i4",
+            "article_path": "제34조제1항제4호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.560651,
+            "id": "21311-20260721-제34조-p1-i3",
+            "article_path": "제34조제1항제3호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.558631,
+            "id": "21311-20260721-제34조-p1-i6",
+            "article_path": "제34조제1항제6호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.558487,
+            "id": "21311-20260721-제34조-p1",
+            "article_path": "제34조제1항",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "S3",
+        "gold_depths": [
+          "subitem"
+        ]
+      },
+      {
+        "level": "provision",
+        "exact": true,
+        "gold_count": 1,
+        "first_hit_rank": 1,
+        "hits": {
+          "1": true,
+          "3": true,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.689314,
+            "id": "21311-20260721-제34조-p1",
+            "article_path": "제34조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.683703,
+            "id": "21311-20260721-제34조-p1-i1",
+            "article_path": "제34조제1항제1호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.681845,
+            "id": "21311-20260721-제34조-p1-i4",
+            "article_path": "제34조제1항제4호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.677644,
+            "id": "21311-20260721-제34조-p1-i6",
+            "article_path": "제34조제1항제6호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.671354,
+            "id": "21311-20260721-제34조-p1-i5",
+            "article_path": "제34조제1항제5호",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "S4",
+        "gold_depths": [
+          "paragraph"
+        ]
+      },
+      {
+        "level": "provision",
+        "exact": true,
+        "gold_count": 1,
+        "first_hit_rank": 4,
+        "hits": {
+          "1": false,
+          "3": false,
+          "5": true
+        },
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 0.25,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.558473,
+            "id": "21311-20260721-제31조-p2",
+            "article_path": "제31조제2항",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.556211,
+            "id": "21311-20260721-제2조-p1-i2",
+            "article_path": "제2조제2호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.545783,
+            "id": "21311-20260721-제2조-p1-i3",
+            "article_path": "제2조제3호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.545583,
+            "id": "21311-20260721-제2조-p1-i5",
+            "article_path": "제2조제5호",
+            "chunk_role": "",
+            "is_hit": true
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.543568,
+            "id": "21311-20260721-제2조-p1-i6",
+            "article_path": "제2조제6호",
+            "chunk_role": "",
+            "is_hit": false
+          }
+        ],
+        "qid": "S5",
+        "gold_depths": [
+          "item"
+        ]
+      },
+      {
+        "level": "provision",
+        "exact": true,
+        "gold_count": 2,
+        "first_hit_rank": 5,
+        "hits": {
+          "1": false,
+          "3": false,
+          "5": true
+        },
+        "recall_at_5": 0.5,
+        "reciprocal_rank": 0.2,
+        "retrieved": [
+          {
+            "rank": 1,
+            "original_rank": 1,
+            "score": 0.746216,
+            "id": "21311-20260721-제34조-p1-i2",
+            "article_path": "제34조제1항제2호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 2,
+            "original_rank": 2,
+            "score": 0.731658,
+            "id": "21311-20260721-제34조-p1-i1",
+            "article_path": "제34조제1항제1호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 3,
+            "original_rank": 3,
+            "score": 0.730934,
+            "id": "21311-20260721-제34조-p1-i6",
+            "article_path": "제34조제1항제6호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 4,
+            "original_rank": 4,
+            "score": 0.727393,
+            "id": "21311-20260721-제34조-p1-i4",
+            "article_path": "제34조제1항제4호",
+            "chunk_role": "",
+            "is_hit": false
+          },
+          {
+            "rank": 5,
+            "original_rank": 5,
+            "score": 0.718992,
+            "id": "21311-20260721-제34조-p1",
+            "article_path": "제34조제1항",
+            "chunk_role": "",
+            "is_hit": true
+          }
+        ],
+        "qid": "S6",
+        "gold_depths": [
+          "item",
+          "paragraph"
+        ]
+      }
+    ]
+  },
+  "unanswerable_questions": [
+    {
+      "qid": "S7",
+      "question": "이 법에 인공지능 로봇의 세금 감면 규정이 있나요?",
+      "top1_score": 0.555672,
+      "top1_article_path": "제8조"
+    }
+  ]
+}

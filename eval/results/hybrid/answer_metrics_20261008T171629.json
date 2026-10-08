@@ -1,0 +1,28 @@
+{
+  "experiment_name": "hybrid_answer_evaluation",
+  "mode": "hybrid",
+  "golden_set_path": "/mnt/c/Users/Admin/gg1th_rag_mini/eval/golden_set_v2.jsonl",
+  "total_questions": 45,
+  "execution_timestamp": "20261008T171629",
+  "answer_evaluation": {
+    "correctness": 0.8653,
+    "faithfulness": 0.7908,
+    "citation_precision": 0.5162,
+    "citation_recall": 0.912,
+    "hallucination_rate": 0.2119,
+    "refusal_precision": 0.0,
+    "refusal_recall": 0.0,
+    "false_refusal_count": 2,
+    "missed_refusal_count": 9,
+    "judge_model": "gpt-5.4-mini",
+    "judge_prompt_version": "v1",
+    "answerable_question_count": 36,
+    "unanswerable_question_count": 9,
+    "judged_count": 45,
+    "judge_failures": []
+  },
+  "api_calls": {
+    "answer_generation_calls": 42,
+    "judge_calls": 42
+  }
+}

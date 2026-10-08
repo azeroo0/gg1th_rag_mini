@@ -1,0 +1,61 @@
+{
+  "experiment_name": "hybrid_golden_set",
+  "dataset_version": "legal_chunks_v2.json (Child 206)",
+  "embedding_model": "text-embedding-3-small",
+  "collection_name": "beopjeong_law_v2",
+  "retriever_type": "hybrid_dense_bm25_rrf",
+  "reranker_model": null,
+  "search_parameters": {
+    "dense_top_k": 20,
+    "bm25_top_k": 20,
+    "rrf_k": 60,
+    "top_k": 5
+  },
+  "execution_timestamp": "20261008T163728",
+  "total_questions": 45,
+  "golden_set_path": "/mnt/c/Users/Admin/gg1th_rag_mini/eval/golden_set_v2.jsonl",
+  "golden_set_field_usage": {
+    "question": "question",
+    "qid": "id",
+    "answerable": "answerable",
+    "category": "type",
+    "references": "answer_articles"
+  },
+  "evaluation_metrics": {
+    "article_level": {
+      "question_count": 36,
+      "hit_at_1": 0.7778,
+      "hit_at_3": 0.9722,
+      "hit_at_5": 0.9722,
+      "recall_at_5": 0.9213,
+      "mrr": 0.875
+    },
+    "provision_level": {
+      "question_count": 36,
+      "hit_at_1": 0.7778,
+      "hit_at_3": 0.9444,
+      "hit_at_5": 0.9722,
+      "recall_at_5": 0.9213,
+      "mrr": 0.8681
+    },
+    "precise_diagnosis": {
+      "question_count": 0,
+      "hit_at_1": null,
+      "hit_at_3": null,
+      "hit_at_5": null,
+      "recall_at_5": null,
+      "mrr": null
+    },
+    "gold_reference_depth_counts": {
+      "article": 44
+    },
+    "answerable_question_count": 36,
+    "unanswerable_question_count": 9,
+    "note": "article_level은 조문(제N조) 단위 적중률이며 세부 조항 적중률이 아니다. precise_diagnosis는 정답이 항ㆍ호ㆍ목까지 지정된 질문만 조문 경로 완전 일치로 평가한 결과다. dense_v2와 동일한 Golden Set/질문 벡터/평가 기준을 사용했다."
+  },
+  "latency": {
+    "embedding_seconds": 63.98,
+    "bm25_index_build_seconds": 5.49,
+    "search_and_eval_seconds": 0.23
+  }
+}

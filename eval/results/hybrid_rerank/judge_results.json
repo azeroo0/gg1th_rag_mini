@@ -1,0 +1,32 @@
+{
+  "q01": {
+    "correctness": 1.0,
+    "faithfulness": 0.78,
+    "hallucination_rate": 0.22,
+    "refused": false,
+    "reasoning": "정의 문구와 핵심 요점은 정확히 포함했습니다. 다만 조문번호, 안전성·신뢰성 확보 의무, 시행일 등 제공된 근거에 없는 내용이 일부 있어 그 부분은 과잉 서술로 보입니다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 2.17
+  },
+  "q02": {
+    "correctness": 1.0,
+    "faithfulness": 0.98,
+    "hallucination_rate": 0.02,
+    "refused": false,
+    "reasoning": "정답 요점을 그대로 포함해 생성형 인공지능의 정의를 정확히 설명했다. 다만 법률명과 시행일은 근거에 없는 정보로 보이나, 핵심 정의와는 무관해 영향은 매우 작다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 1.995
+  },
+  "q37": {
+    "correctness": 1.0,
+    "faithfulness": 1.0,
+    "hallucination_rate": 0.0,
+    "refused": false,
+    "reasoning": "답변은 세부 방법과 평가 항목은 대통령령에 위임되어 있어 제공된 법률만으로는 특정할 수 없다고 정확히 설명했다. 또한 조문에 있는 범위(기본권 영향 평가, 취약계층 특성 반영, 세부사항 위임)만을 근거로 제시해 사실과도 부합한다.",
+    "judge_model": "gpt-5.4-mini",
+    "prompt_version": "v1",
+    "elapsed_seconds": 1.969
+  }
+}

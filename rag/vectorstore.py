@@ -12,8 +12,11 @@ from common.ai_model import get_embedding_model
 from common.qdrant import get_qdrant_client
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+# v1 컬렉션은 정의 전용 Child 추가 이전 스냅샷(205 Child)으로 구성되므로
+# 재현성을 위해 legal_chunks_v1.json을 사용한다.
+# v2 컬렉션 구축은 scripts/build_dense_v2.py가 담당한다.
 CHUNKS_PATH = (
-    BASE_DIR / "data" / "ai_basic_law" / "legal_chunks.json"
+    BASE_DIR / "data" / "ai_basic_law" / "legal_chunks_v1.json"
 )
 
 COLLECTION_NAME = "beopjeong_law_v1"

@@ -17,8 +17,8 @@ def get_llm_model(
     max_tokens: int = 512
 ):
     return ChatOpenAI(
-        model=MODEL,
-        api_key=API_KEY,
+        model=model,
+        api_key=api_key,
         base_url=BASE_URL,
         temperature=temperature,
         use_responses_api=False,  # base url로 할 때는 이부분 넣어야 함.(MonoRouter 사용)

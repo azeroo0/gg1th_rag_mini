@@ -1,0 +1,270 @@
+{
+  "experiment_name": "golden_set_dense_v1_vs_v2",
+  "collection_name": {
+    "v1": "beopjeong_law_v1",
+    "v2": "beopjeong_law_v2"
+  },
+  "embedding_model": "text-embedding-3-small",
+  "dataset_version": {
+    "v1": "legal_chunks_v1.json (Child 205)",
+    "v2": "legal_chunks_v2.json (Child 206)"
+  },
+  "golden_set_path": "/tmp/claude-1000/-mnt-c-Users-Admin-gg1th-rag-mini/610d9f42-ce6f-4245-a754-44cc264c14a7/scratchpad/smoke_golden_set.jsonl",
+  "golden_set_field_usage": {
+    "question": "question",
+    "qid": "qid",
+    "answerable": "answerable",
+    "category": "category",
+    "references": "gold_article_ids"
+  },
+  "total_questions": 7,
+  "answerable_question_count": 6,
+  "unanswerable_question_count": 1,
+  "top_k": 5,
+  "execution_timestamp": "20261008T151256",
+  "evaluation_metrics": {
+    "v1": {
+      "article_level": {
+        "question_count": 6,
+        "hit_at_1": 0.3333,
+        "hit_at_3": 0.8333,
+        "hit_at_5": 0.8333,
+        "recall_at_5": 0.75,
+        "mrr": 0.5556
+      },
+      "provision_level": {
+        "question_count": 6,
+        "hit_at_1": 0.3333,
+        "hit_at_3": 0.6667,
+        "hit_at_5": 0.8333,
+        "recall_at_5": 0.75,
+        "mrr": 0.5139
+      },
+      "precise_diagnosis": {
+        "question_count": 6,
+        "hit_at_1": 0.1667,
+        "hit_at_3": 0.1667,
+        "hit_at_5": 0.5,
+        "recall_at_5": 0.4167,
+        "mrr": 0.2417
+      },
+      "gold_reference_depth_counts": {
+        "item": 4,
+        "subitem": 1,
+        "paragraph": 2
+      },
+      "answerable_question_count": 6,
+      "unanswerable_question_count": 1,
+      "note": "article_level은 조문(제N조) 단위 적중률이며 세부 조항 적중률이 아니다. precise_diagnosis는 정답이 항ㆍ호ㆍ목까지 지정된 질문만 조문 경로 완전 일치로 평가한 결과다."
+    },
+    "v2": {
+      "article_level": {
+        "question_count": 6,
+        "hit_at_1": 0.8333,
+        "hit_at_3": 0.8333,
+        "hit_at_5": 0.8333,
+        "recall_at_5": 0.75,
+        "mrr": 0.8333
+      },
+      "provision_level": {
+        "question_count": 6,
+        "hit_at_1": 0.6667,
+        "hit_at_3": 0.6667,
+        "hit_at_5": 0.8333,
+        "recall_at_5": 0.75,
+        "mrr": 0.7
+      },
+      "precise_diagnosis": {
+        "question_count": 6,
+        "hit_at_1": 0.5,
+        "hit_at_3": 0.5,
+        "hit_at_5": 0.8333,
+        "recall_at_5": 0.75,
+        "mrr": 0.5667
+      },
+      "gold_reference_depth_counts": {
+        "item": 4,
+        "subitem": 1,
+        "paragraph": 2
+      },
+      "answerable_question_count": 6,
+      "unanswerable_question_count": 1,
+      "note": "article_level은 조문(제N조) 단위 적중률이며 세부 조항 적중률이 아니다. precise_diagnosis는 정답이 항ㆍ호ㆍ목까지 지정된 질문만 조문 경로 완전 일치로 평가한 결과다."
+    }
+  },
+  "metric_rows": [
+    {
+      "level": "article_level",
+      "metric": "hit_at_1",
+      "v1": 0.3333,
+      "v2": 0.8333,
+      "delta": 0.5
+    },
+    {
+      "level": "article_level",
+      "metric": "hit_at_3",
+      "v1": 0.8333,
+      "v2": 0.8333,
+      "delta": 0.0
+    },
+    {
+      "level": "article_level",
+      "metric": "hit_at_5",
+      "v1": 0.8333,
+      "v2": 0.8333,
+      "delta": 0.0
+    },
+    {
+      "level": "article_level",
+      "metric": "recall_at_5",
+      "v1": 0.75,
+      "v2": 0.75,
+      "delta": 0.0
+    },
+    {
+      "level": "article_level",
+      "metric": "mrr",
+      "v1": 0.5556,
+      "v2": 0.8333,
+      "delta": 0.2777
+    },
+    {
+      "level": "provision_level",
+      "metric": "hit_at_1",
+      "v1": 0.3333,
+      "v2": 0.6667,
+      "delta": 0.3334
+    },
+    {
+      "level": "provision_level",
+      "metric": "hit_at_3",
+      "v1": 0.6667,
+      "v2": 0.6667,
+      "delta": 0.0
+    },
+    {
+      "level": "provision_level",
+      "metric": "hit_at_5",
+      "v1": 0.8333,
+      "v2": 0.8333,
+      "delta": 0.0
+    },
+    {
+      "level": "provision_level",
+      "metric": "recall_at_5",
+      "v1": 0.75,
+      "v2": 0.75,
+      "delta": 0.0
+    },
+    {
+      "level": "provision_level",
+      "metric": "mrr",
+      "v1": 0.5139,
+      "v2": 0.7,
+      "delta": 0.1861
+    },
+    {
+      "level": "precise_diagnosis",
+      "metric": "hit_at_1",
+      "v1": 0.1667,
+      "v2": 0.5,
+      "delta": 0.3333
+    },
+    {
+      "level": "precise_diagnosis",
+      "metric": "hit_at_3",
+      "v1": 0.1667,
+      "v2": 0.5,
+      "delta": 0.3333
+    },
+    {
+      "level": "precise_diagnosis",
+      "metric": "hit_at_5",
+      "v1": 0.5,
+      "v2": 0.8333,
+      "delta": 0.3333
+    },
+    {
+      "level": "precise_diagnosis",
+      "metric": "recall_at_5",
+      "v1": 0.4167,
+      "v2": 0.75,
+      "delta": 0.3333
+    },
+    {
+      "level": "precise_diagnosis",
+      "metric": "mrr",
+      "v1": 0.2417,
+      "v2": 0.5667,
+      "delta": 0.325
+    }
+  ],
+  "question_changes": {
+    "article_level": {
+      "improved": [
+        {
+          "qid": "S1",
+          "v1_first_hit_rank": 2,
+          "v2_first_hit_rank": 1
+        },
+        {
+          "qid": "S2",
+          "v1_first_hit_rank": 3,
+          "v2_first_hit_rank": 1
+        },
+        {
+          "qid": "S5",
+          "v1_first_hit_rank": 2,
+          "v2_first_hit_rank": 1
+        }
+      ],
+      "regressed": [],
+      "unchanged_count": 3
+    },
+    "provision_level": {
+      "improved": [
+        {
+          "qid": "S1",
+          "v1_first_hit_rank": 2,
+          "v2_first_hit_rank": 1
+        },
+        {
+          "qid": "S2",
+          "v1_first_hit_rank": 3,
+          "v2_first_hit_rank": 1
+        }
+      ],
+      "regressed": [
+        {
+          "qid": "S5",
+          "v1_first_hit_rank": 4,
+          "v2_first_hit_rank": 5
+        }
+      ],
+      "unchanged_count": 3
+    },
+    "precise_diagnosis": {
+      "improved": [
+        {
+          "qid": "S1",
+          "v1_first_hit_rank": null,
+          "v2_first_hit_rank": 1
+        },
+        {
+          "qid": "S2",
+          "v1_first_hit_rank": null,
+          "v2_first_hit_rank": 1
+        }
+      ],
+      "regressed": [
+        {
+          "qid": "S5",
+          "v1_first_hit_rank": 4,
+          "v2_first_hit_rank": 5
+        }
+      ],
+      "unchanged_count": 3
+    }
+  },
+  "retrieval_results": null
+}

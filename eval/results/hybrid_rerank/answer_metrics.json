@@ -1,0 +1,28 @@
+{
+  "experiment_name": "hybrid_rerank_answer_evaluation",
+  "mode": "hybrid_rerank",
+  "golden_set_path": "/tmp/claude-1000/smoke_golden.jsonl",
+  "total_questions": 3,
+  "execution_timestamp": "20261008T171540",
+  "answer_evaluation": {
+    "correctness": 1.0,
+    "faithfulness": 0.88,
+    "citation_precision": 0.375,
+    "citation_recall": 1.0,
+    "hallucination_rate": 0.12,
+    "refusal_precision": null,
+    "refusal_recall": 0.0,
+    "false_refusal_count": 0,
+    "missed_refusal_count": 1,
+    "judge_model": "gpt-5.4-mini",
+    "judge_prompt_version": "v1",
+    "answerable_question_count": 2,
+    "unanswerable_question_count": 1,
+    "judged_count": 3,
+    "judge_failures": []
+  },
+  "api_calls": {
+    "answer_generation_calls": 3,
+    "judge_calls": 3
+  }
+}

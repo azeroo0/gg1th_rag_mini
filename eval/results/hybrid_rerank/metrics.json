@@ -1,0 +1,104 @@
+{
+  "experiment_name": "hybrid_rerank_golden_set",
+  "dataset_version": "legal_chunks_v2.json (Child 206)",
+  "embedding_model": "text-embedding-3-small",
+  "collection_name": "beopjeong_law_v2",
+  "retriever_type": "hybrid_dense_bm25_rrf_plus_qwen_rerank",
+  "reranker_model": "Qwen/Qwen3-Reranker-0.6B",
+  "search_parameters": {
+    "candidate_top_k": 8,
+    "top_k": 5
+  },
+  "execution_timestamp": "20261008T170717",
+  "total_questions": 45,
+  "golden_set_path": "/mnt/c/Users/Admin/gg1th_rag_mini/eval/golden_set_v2.jsonl",
+  "evaluation_metrics": {
+    "article_level": {
+      "question_count": 36,
+      "hit_at_1": 0.8056,
+      "hit_at_3": 1.0,
+      "hit_at_5": 1.0,
+      "recall_at_5": 0.9491,
+      "mrr": 0.8981
+    },
+    "provision_level": {
+      "question_count": 36,
+      "hit_at_1": 0.8056,
+      "hit_at_3": 1.0,
+      "hit_at_5": 1.0,
+      "recall_at_5": 0.9491,
+      "mrr": 0.8981
+    },
+    "precise_diagnosis": {
+      "question_count": 0,
+      "hit_at_1": null,
+      "hit_at_3": null,
+      "hit_at_5": null,
+      "recall_at_5": null,
+      "mrr": null
+    },
+    "gold_reference_depth_counts": {
+      "article": 44
+    },
+    "answerable_question_count": 36,
+    "unanswerable_question_count": 9,
+    "note": "Hybrid Top-8 후보를 Qwen Reranker로 재정렬한 뒤 Top-5까지 평가했다. dense_v2/hybrid와 동일한 Golden Set/질문 벡터/평가 기준을 사용했다."
+  },
+  "rank_changes": {
+    "improved": [
+      {
+        "qid": "q07",
+        "question": "고영향 인공지능을 제공할 때 이용자에게 무엇을 알려야 하나요?",
+        "before_rerank_rank": 4,
+        "after_rerank_rank": 2
+      },
+      {
+        "qid": "q10",
+        "question": "사업자는 자신의 인공지능이 고영향 인공지능인지 스스로 검토해야 하나요?",
+        "before_rerank_rank": 2,
+        "after_rerank_rank": 1
+      },
+      {
+        "qid": "q13",
+        "question": "AI로 만든 그림이나 영상을 올릴 때 주의할 점이 있나요?",
+        "before_rerank_rank": 2,
+        "after_rerank_rank": 1
+      },
+      {
+        "qid": "q17",
+        "question": "외국 회사가 만든 AI를 한국에서 서비스해도 이 법이 적용되나요?",
+        "before_rerank_rank": 8,
+        "after_rerank_rank": 1
+      }
+    ],
+    "regressed": [
+      {
+        "qid": "q15",
+        "question": "AI로 채용 평가를 하는 프로그램도 특별히 관리되나요?",
+        "before_rerank_rank": 2,
+        "after_rerank_rank": 3
+      },
+      {
+        "qid": "q16",
+        "question": "AI로 대출 심사를 하면 어떤 규제를 받나요?",
+        "before_rerank_rank": 1,
+        "after_rerank_rank": 2
+      },
+      {
+        "qid": "q19",
+        "question": "고영향 인공지능 관련 자료 제출이나 조사에 응하지 않으면 어떻게 되나요?",
+        "before_rerank_rank": 1,
+        "after_rerank_rank": 2
+      }
+    ],
+    "unchanged_count": 29
+  },
+  "errors": [],
+  "latency": {
+    "embedding_seconds": 0.2,
+    "candidate_build_seconds": 0.3,
+    "reranker_load_seconds": 5.38,
+    "reranker_inference_seconds": 9.227,
+    "reranking_and_eval_seconds": 8.3
+  }
+}
