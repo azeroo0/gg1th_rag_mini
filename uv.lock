@@ -2128,6 +2128,7 @@ dependencies = [
     { name = "openai" },
     { name = "python-dotenv" },
     { name = "qdrant-client" },
+    { name = "requests" },
     { name = "uvicorn", extra = ["standard"] },
 ]
 
@@ -2141,6 +2142,7 @@ requires-dist = [
     { name = "openai", specifier = ">=3.26.0" },
     { name = "python-dotenv", specifier = ">=1.2.4" },
     { name = "qdrant-client", specifier = ">=1.19.1" },
+    { name = "requests", specifier = ">=2.34.2" },
     { name = "uvicorn", extras = ["standard"], specifier = ">=0.54.0" },
 ]
 
